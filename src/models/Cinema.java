@@ -9,7 +9,7 @@ public class Cinema {
     private ArrayList<Film> filmList;
 
     public Cinema() {
-        functionList = new ArrayList<>();
+        fuaaaaa = new ArrayList<>();
         filmList = new ArrayList<Film>();
     }
 
