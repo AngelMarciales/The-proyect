@@ -1,10 +1,8 @@
 package views;
 
 import java.awt.Color;
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.plaf.DimensionUIResource;
 import java.awt.event.ActionListener;
 
 public class CenterPanel1 extends JPanel {
