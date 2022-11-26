@@ -6,13 +6,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Views.Views;
 
-public class Controller implements ActionListener {
+public class ControllerUser implements ActionListener {
 
     private Views views;
     private int cost;
     private String position;
 
-    public Controller() {
+    public ControllerUser() {
         views = new Views(this);
     }
 

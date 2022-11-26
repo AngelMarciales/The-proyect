@@ -12,7 +12,7 @@ import Views.Views;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Controller implements ActionListener {
+public class ControllerAdmin implements ActionListener {
 
     private static final int PORT = 1234;
     private static final String HOST = "localhost";
@@ -21,7 +21,7 @@ public class Controller implements ActionListener {
     private Socket socket;
     private Views views;
 
-    public Controller() {
+    public ControllerAdmin() {
         try {
             socket = new Socket(HOST, PORT);
             input = new DataInputStream(socket.getInputStream());
