@@ -20,7 +20,6 @@ public class ClientThreads extends Thread {
     private Persistence persistence;
     private int cost;
     private String position;
-    private Cinema models;
 
     public ClientThreads(Socket serverSocket, Cinema cinema) {
         try {
