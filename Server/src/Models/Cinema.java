@@ -10,16 +10,18 @@ public class Cinema {
     private SearchBinaryTree<Film> filmList;
 
     public Cinema() {
-        functionList = new SearchBinaryTree<>(null);
-        filmList = new SearchBinaryTree<Film>(null);
+        functionList = new SearchBinaryTree<Function>(Function::compareTo);
+        filmList = new SearchBinaryTree<Film>(Film::compareTo);
     }
 
     public void addFunction(Function function) {
-        functionList.insert(function);
+        System.out.println("UwU");
+        // functionList.insert(function);
     }
 
     public void addFilm(Film film) {
-        filmList.insert(film);
+        System.out.println("OwO");
+        // filmList.insert(film);
     }
 
     public void loadArchives(ArrayList<Function> functions, ArrayList<Film> films) {

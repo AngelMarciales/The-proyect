@@ -1,6 +1,10 @@
-package Views;
+package ClientViews;
 
 import javax.swing.JPanel;
+
+import ClientViews.CenterPanelBillBoard;
+import ClientViews.LeftPanelBillboard;
+import ClientViews.RightPanelBillboard;
 
 import java.awt.event.ActionListener;
 import java.awt.BorderLayout;

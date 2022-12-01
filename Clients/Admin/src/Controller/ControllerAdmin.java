@@ -34,16 +34,45 @@ public class ControllerAdmin implements ActionListener {
 
     public void run() {
         try {
-            output.writeUTF(new Gson().toJson("Admin"));
-        } catch (IOException e) {
+            output.writeUTF("Admin");
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent event) {
+        try {
+            String source = event.getActionCommand();
+            switch (source) {
+                case "Añadir funcion":
+                    output.writeUTF("Añadir funcion");
+                    views.dialogBuy.setVisible(true);
+                    break;
+                case "Añadir pelicula":
+                    output.writeUTF("Añadir pelicula");
+                    views.dialogBillBoard.setVisible(true);
+                    break;
+                case "Borrar funcion":
+                    output.writeUTF("Borrar funcion");
+                    views.dialogCancel.setVisible(true);
+                    break;
+                case "Editar funcion":
+                    output.writeUTF("Editar funcion");
+                    views.dialogRanking.setVisible(true);
+                    break;
+                case "Salir":
+                    output.writeUTF("Salir");
+                    break;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public static void main(String[] args) {
+        ControllerAdmin cA = new ControllerAdmin();
+        cA.run();
     }
 }

@@ -1,6 +1,10 @@
-package Views;
+package ClientViews;
 
 import javax.swing.JDialog;
+
+import ClientViews.BotPanelDialogBuy3;
+import ClientViews.CenterPanelDialogBuy3;
+import ClientViews.TopPanelDialogBuy3;
 
 import java.awt.event.ActionListener;
 import java.awt.BorderLayout;

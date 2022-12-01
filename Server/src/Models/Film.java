@@ -1,6 +1,6 @@
 package Models;
 
-public class Film {
+public class Film implements Comparable<Film>{
     
     private String name;
     private String director;
@@ -29,5 +29,10 @@ public class Film {
 
     public void setPopularityMin(int num) {
         popularity -= num;
+    }
+
+    @Override
+    public int compareTo(Film o) {
+        return name.compareTo(o.getName());
     }
 }

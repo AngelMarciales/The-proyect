@@ -1,4 +1,4 @@
-package Views;
+package ClientViews;
 
 import java.awt.Color;
 import javax.swing.JButton;
@@ -20,10 +20,11 @@ public class CenterPanel1 extends JPanel {
     public void initComponents(ActionListener listener) {
         this.setBackground(Color.WHITE);
         this.setLayout(null);
-        button1 = new JButton("Añadir funcion");
-        button2 = new JButton("Añadir pelicula");
-        button3 = new JButton("Borrar funcion");
-        button4 = new JButton("Editar funcion");
+
+        button1 = new JButton("Comprar Boleta");
+        button2 = new JButton("Ver Cartelera");
+        button3 = new JButton("Cancelar boleta");
+        button4 = new JButton("Ver Rankings");
         button5 = new JButton("Salir");
 
         button1.setForeground(Color.BLACK);

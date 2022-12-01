@@ -1,4 +1,4 @@
-package Views;
+package ClientViews;
 
 import java.awt.Color;
 import javax.swing.JPanel;

@@ -2,9 +2,11 @@ package Controller;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+
+import ClientViews.Views;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import Views.Views;
 
 public class ControllerUser implements ActionListener {
 

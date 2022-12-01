@@ -1,6 +1,13 @@
-package Views;
+package ClientViews;
 
 import javax.swing.JFrame;
+
+import ClientViews.CenterPanel1;
+import ClientViews.DialogBillBoard;
+import ClientViews.DialogBuy1;
+import ClientViews.DialogCancel;
+import ClientViews.DialogRanking;
+import ClientViews.TopPanel1;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;

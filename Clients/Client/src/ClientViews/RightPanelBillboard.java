@@ -1,8 +1,11 @@
-package Views;
+package ClientViews;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
+
+import ClientViews.BotPanelRightBillboard;
+import ClientViews.CenterPanelRigthBillboard;
 
 public class RightPanelBillboard extends JPanel {
 

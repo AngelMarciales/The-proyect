@@ -1,6 +1,6 @@
 package Models;
 
-public class Function {
+public class Function implements Comparable<Function>{
 
     private int id;
     private String format;
@@ -40,5 +40,10 @@ public class Function {
 
     public Room getRoom() {
         return room;
+    }
+
+    @Override
+    public int compareTo(Function o) {
+        return id - o.getId();
     }
 }

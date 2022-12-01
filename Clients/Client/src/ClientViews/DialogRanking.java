@@ -1,6 +1,10 @@
-package Views;
+package ClientViews;
 
 import javax.swing.JDialog;
+
+import ClientViews.BotPanelDialogRanking;
+import ClientViews.CenterPanelDialogRanking;
+import ClientViews.TopPanelDialogRanking;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
