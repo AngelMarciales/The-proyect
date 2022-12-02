@@ -1,19 +1,38 @@
 package Views;
 
-import javax.swing.JDialog;
+import javax.swing.*;
 
 import java.awt.event.ActionListener;
 
-public class AddFilmPanel extends JDialog {
+public class AddFilmPanel extends JPanel{
 
-    public AddFilmPanel(ActionListener listener) {
-        this.setSize(600, 450);
-        this.setResizable(false);
-        this.setLocationRelativeTo(null);
+    private JLabel nameLabel;
+    private JLabel directoryLabel;
+    private JTextField nameTxt;
+    private JTextField directoryTxt;
+
+    public AddFilmPanel(ActionListener listener){
         initComponents(listener);
-        this.setVisible(false);
     }
 
-    public void initComponents(ActionListener listener) {
+    private void initComponents(ActionListener listener) {
+        nameLabel = new JLabel("Nombre");
+        add(nameLabel);
+        nameTxt = new JTextField(10);
+        add(nameTxt);
+
+        directoryLabel = new JLabel("Director");
+        add(directoryLabel);
+        directoryTxt = new JTextField(10);
+        add(directoryTxt);
     }
+
+    public String getName(){
+        return nameTxt.getText();
+    }
+
+    public String getDirector(){
+        return directoryTxt.getText();
+    }
+    
 }

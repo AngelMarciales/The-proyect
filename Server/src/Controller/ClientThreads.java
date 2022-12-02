@@ -53,10 +53,10 @@ public class ClientThreads extends Thread {
                                 cinema.addFilm(new Film(response, response, response));
                                 break;
                             case "Borrar funcion":
-
+                                    cinema.deleteFunction(MAX_PRIORITY);
                                 break;
                             case "Editar funcion":
-
+                                    cinema.editFunction(null);
                                 break;
                             case "Salir":
                                 exit = false;

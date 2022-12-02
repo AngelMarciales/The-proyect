@@ -1,6 +1,6 @@
 package Views;
 
-import java.awt.BorderLayout;
+import java.awt.*;
 import javax.swing.JDialog;
 import java.awt.Color;
 import java.awt.event.ActionListener;
@@ -9,9 +9,10 @@ import java.util.ArrayList;
 public class AddfunctionDialog extends JDialog {
 
     private AddFunctionPanel addFunctionPanel;
+    private AcceptAndCancelPanel buttons;
 
     public AddfunctionDialog(ActionListener listener) {
-        this.setSize(400, 250);
+        this.setSize(600, 600);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         initComponents(listener);
@@ -20,10 +21,13 @@ public class AddfunctionDialog extends JDialog {
 
     public void initComponents(ActionListener listener) {
         this.getContentPane().setBackground(Color.BLACK);
-        setLayout(new BorderLayout());
+        this.setLayout(new BorderLayout());
         
         addFunctionPanel = new AddFunctionPanel(listener);
-        add(addFunctionPanel);
+        add(addFunctionPanel, BorderLayout.CENTER);
+
+        buttons = new AcceptAndCancelPanel(listener);
+        add(buttons, BorderLayout.SOUTH);
     }
 
     public void addFilmItems(ArrayList<String> films){

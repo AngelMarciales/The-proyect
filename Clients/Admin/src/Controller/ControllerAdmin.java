@@ -51,22 +51,22 @@ public class ControllerAdmin implements ActionListener {
                     views.functionPanel.setVisible(true);
                     break;
                 case "Añadir pelicula":
-                    output.writeUTF("Añadir pelicula");
+                    // output.writeUTF("Añadir pelicula");
                     views.setVisible(false);
                     views.filmPanel.setVisible(true);
                     break;
                 case "Borrar funcion":
-                    output.writeUTF("Borrar funcion");
+                    // output.writeUTF("Borrar funcion");
                     views.setVisible(false);
                     views.deleteFunctionPanel.setVisible(true);
                     break;
                 case "Editar funcion":
-                    output.writeUTF("Editar funcion");
+                    // output.writeUTF("Editar funcion");
                     views.setVisible(false);
                     views.editFunctionPanel.setVisible(true);
                     break;
                 case "Salir":
-                    output.writeUTF("Salir");
+                    // output.writeUTF("Salir");
                     break;
             }
 

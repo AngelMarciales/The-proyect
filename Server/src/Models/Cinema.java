@@ -15,13 +15,11 @@ public class Cinema {
     }
 
     public void addFunction(Function function) {
-        System.out.println("UwU");
-        // functionList.insert(function);
+        functionList.insert(function);
     }
 
     public void addFilm(Film film) {
-        System.out.println("OwO");
-        // filmList.insert(film);
+        filmList.insert(film);
     }
 
     public void loadArchives(ArrayList<Function> functions, ArrayList<Film> films) {
@@ -41,12 +39,17 @@ public class Cinema {
         return null;
     }
 
-    public void deleteFilm(String name) {
-
+    public void deleteFunction(int id) {
+        ArrayList<Function> functionInOrder = functionList.inOrder();
+        for (int i = 0; i < functionInOrder.size(); i++) {
+            if (functionInOrder.get(i).getId() == id) {
+                functionList.delete(functionInOrder.get(i));
+            }
+        }
     }
 
     public void editFunction(Function function) {
-
+        
     }
 
     public int buyTicket(int id, Function function) {
