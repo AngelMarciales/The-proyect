@@ -6,11 +6,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class TopPanel1 extends JPanel {
+public class ImagePanel extends JPanel {
 
     private JLabel label;
 
-    public TopPanel1() {
+    public ImagePanel() {
         initComponents();
     }
 

@@ -22,23 +22,23 @@ public class ControllerAdmin implements ActionListener {
     private Views views;
 
     public ControllerAdmin() {
-        try {
-            socket = new Socket(HOST, PORT);
-            input = new DataInputStream(socket.getInputStream());
-            output = new DataOutputStream(socket.getOutputStream());
+        // try {
+        //     socket = new Socket(HOST, PORT);
+        //     input = new DataInputStream(socket.getInputStream());
+        //     output = new DataOutputStream(socket.getOutputStream());
             views = new Views(this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        // } catch (IOException e) {
+        //     e.printStackTrace();
+        // }
     }
 
-    public void run() {
-        try {
-            output.writeUTF("Admin");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    // public void run() {
+    //     try {
+    //         output.writeUTF("Admin");
+    //     } catch (Exception e) {
+    //         e.printStackTrace();
+    //     }
+    // }
 
     @Override
     public void actionPerformed(ActionEvent event) {
@@ -46,25 +46,30 @@ public class ControllerAdmin implements ActionListener {
             String source = event.getActionCommand();
             switch (source) {
                 case "Añadir funcion":
-                    output.writeUTF("Añadir funcion");
-                    views.dialogBuy.setVisible(true);
+                    // output.writeUTF("Añadir funcion");
+                    views.setVisible(false);
+                    views.functionPanel.setVisible(true);
                     break;
                 case "Añadir pelicula":
                     output.writeUTF("Añadir pelicula");
-                    views.dialogBillBoard.setVisible(true);
+                    views.setVisible(false);
+                    views.filmPanel.setVisible(true);
                     break;
                 case "Borrar funcion":
                     output.writeUTF("Borrar funcion");
-                    views.dialogCancel.setVisible(true);
+                    views.setVisible(false);
+                    views.deleteFunctionPanel.setVisible(true);
                     break;
                 case "Editar funcion":
                     output.writeUTF("Editar funcion");
-                    views.dialogRanking.setVisible(true);
+                    views.setVisible(false);
+                    views.editFunctionPanel.setVisible(true);
                     break;
                 case "Salir":
                     output.writeUTF("Salir");
                     break;
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -73,6 +78,6 @@ public class ControllerAdmin implements ActionListener {
 
     public static void main(String[] args) {
         ControllerAdmin cA = new ControllerAdmin();
-        cA.run();
+        // cA.run();
     }
 }

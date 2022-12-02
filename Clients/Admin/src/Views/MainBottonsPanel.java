@@ -5,7 +5,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import java.awt.event.ActionListener;
 
-public class CenterPanel1 extends JPanel {
+public class MainBottonsPanel extends JPanel {
 
     private JButton button1;
     private JButton button2;
@@ -13,7 +13,7 @@ public class CenterPanel1 extends JPanel {
     private JButton button4;
     private JButton button5;
 
-    public CenterPanel1(ActionListener listener) {
+    public MainBottonsPanel(ActionListener listener) {
         initComponents(listener);
     }
 

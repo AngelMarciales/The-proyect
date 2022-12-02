@@ -60,6 +60,7 @@ public class ClientThreads extends Thread {
                                 break;
                             case "Salir":
                                 exit = false;
+                                socket.close();
                                 break;
                         }
                         break;

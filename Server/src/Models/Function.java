@@ -5,15 +5,15 @@ public class Function implements Comparable<Function>{
     private int id;
     private String format;
     private Film film;
-    private String hourAndRoom;
+    private String hour;
     private int cost;
     private Room room;
 
-    public Function(int id, String format, Film film, String hourAndRoom, int cost, Room room) {
+    public Function(int id, String format, Film film, String hour, int cost, Room room) {
         this.id = id;
         this.format = format;
         this.film = film;
-        this.hourAndRoom = hourAndRoom;
+        this.hour = hour;
         this.cost = cost;
         this.room = room;
     }
@@ -30,8 +30,8 @@ public class Function implements Comparable<Function>{
         return film;
     }
 
-    public String getHourAndRoom() {
-        return hourAndRoom;
+    public String getHour() {
+        return hour;
     }
 
     public int getCost() {
