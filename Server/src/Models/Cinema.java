@@ -15,11 +15,15 @@ public class Cinema {
     }
 
     public void addFunction(Function function) {
-        functionList.insert(function);
+        if (!functionList.exist(function)) {
+            functionList.insert(function);
+        }
     }
 
     public void addFilm(Film film) {
-        filmList.insert(film);
+        if (!filmList.exist(film)) {
+            filmList.insert(film);
+        }
     }
 
     public void loadArchives(ArrayList<Function> functions, ArrayList<Film> films) {
@@ -32,11 +36,21 @@ public class Cinema {
     }
 
     public Film[] getBillboard() {
-        return null;
+        ArrayList<Film> aux = filmList.inOrder();
+        Film[] billboard = new Film[aux.size()];
+        for (int i = 0; i < aux.size(); i++) {
+            billboard[i] = aux.get(i);
+        }
+        return billboard;
     }
 
     public Function[] getFunctionList() {
-        return null;
+        ArrayList<Function> aux = functionList.inOrder();
+        Function[] functions = new Function[aux.size()];
+        for (int i = 0; i < aux.size(); i++) {
+            functions[i] = aux.get(i);
+        }
+        return functions;
     }
 
     public void deleteFunction(int id) {
@@ -49,23 +63,78 @@ public class Cinema {
     }
 
     public void editFunction(Function function) {
-        
+
     }
 
     public int buyTicket(int id, Function function) {
-        return 0;
+        int cost = 0;
+        if (!functionList.exist(function)) {
+            filmList.search(functionList.search(function).getFilm()).setPopularityMax(1);
+            tourChairs(id, function, true);
+            cost = functionList.search(function).getCost();
+        }
+        return cost;
+    }
+
+    public int buyTicket(ArrayList<Integer> id, Function function) {
+        int cost = 0;
+        if (!functionList.exist(function)) {
+            filmList.search(functionList.search(function).getFilm()).setPopularityMax(id.size());
+            tourChairs(id, function, true);
+            cost += functionList.search(function).getCost();
+        }
+        return cost;
     }
 
     public void tourChairs(int id, Function function, boolean confirm) {
+        if (!functionList.exist(function)) {
+            Chair[][] aux = functionList.search(function).getRoom().getChairList();
+            for (int i = 0; i < aux.length; i++) {
+                for (int j = 0; j < aux[i].length; j++) {
+                    if (aux[i][j].getId() == id) {
+                        aux[i][j].setState(confirm);
+                        break;
+                    }
+                }
+            }
+        }
+    }
 
+    public void tourChairs(ArrayList<Integer> id, Function function, boolean confirm) {
+        Chair[][] aux = functionList.search(function).getRoom().getChairList();
+        for (int i = 0; i < aux.length; i++) {
+            for (int j = 0; j < aux[i].length; j++) {
+                for (int j2 = 0; j2 < id.size(); j2++) {
+                    if (aux[i][j].getId() == id.get(j2)) {
+                        aux[i][j].setState(confirm);
+                    }
+                }
+
+            }
+        }
     }
 
     public int getReservations(int idFunction) {
-        return 0;
+        Function aux = null;
+        int count = 0;
+        for (int i = 0; i < functionList.inOrder().size(); i++) {
+            if(functionList.inOrder().get(i).getId() == idFunction){
+                aux = functionList.inOrder().get(i);
+                break;
+            }
+        }
+        for (int i = 0; i < aux.getRoom().getChairList().length; i++) {
+            for (int j = 0; j < aux.getRoom().getChairList()[i].length; j++) {
+                if(aux.getRoom().getChairList()[i][j].getState() != false){
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
     public String[] calculatePopularity() {
-        String[] winner = new String[5];
+        String[] winner = new String[filmList.inOrder().size()];
         // filmList.sort(new Comparator<Film>() {
         // @Override
         // public int compare(Film o1, Film o2) {

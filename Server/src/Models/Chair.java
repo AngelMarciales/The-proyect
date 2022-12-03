@@ -18,7 +18,7 @@ public class Chair {
         this.id = id;
     }
 
-    public boolean isState() {
+    public boolean getState() {
         return state;
     }
 
