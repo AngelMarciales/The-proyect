@@ -3,6 +3,7 @@ package Models;
 import Structure.*;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Cinema {
 
@@ -118,14 +119,14 @@ public class Cinema {
         Function aux = null;
         int count = 0;
         for (int i = 0; i < functionList.inOrder().size(); i++) {
-            if(functionList.inOrder().get(i).getId() == idFunction){
+            if (functionList.inOrder().get(i).getId() == idFunction) {
                 aux = functionList.inOrder().get(i);
                 break;
             }
         }
         for (int i = 0; i < aux.getRoom().getChairList().length; i++) {
             for (int j = 0; j < aux.getRoom().getChairList()[i].length; j++) {
-                if(aux.getRoom().getChairList()[i][j].getState() != false){
+                if (aux.getRoom().getChairList()[i][j].getState() != false) {
                     count++;
                 }
             }
@@ -135,16 +136,17 @@ public class Cinema {
 
     public String[] calculatePopularity() {
         String[] winner = new String[filmList.inOrder().size()];
-        // filmList.sort(new Comparator<Film>() {
-        // @Override
-        // public int compare(Film o1, Film o2) {
-        // return o2.getPopularity() - (o1.getPopularity());
-        // }
-        // });
-        // ;
-        // for (int i = 0; i < filmList.size(); i++) {
-        // winner[i] = filmList.get(i).getName();
-        // }
+        ArrayList<Film> aux = filmList.inOrder();
+        aux.sort((Comparator<? super Film>) new Comparator<Film>() {
+            @Override
+            public int compare(Film o1, Film o2) {
+                return o2.getPopularity() - (o1.getPopularity());
+            }
+        });
+        ;
+        for (int i = 0; i < aux.size(); i++) {
+            winner[i] = aux.get(i).getName();
+        }
         return winner;
     }
 

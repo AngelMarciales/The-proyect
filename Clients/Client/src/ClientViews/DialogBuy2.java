@@ -2,11 +2,6 @@ package ClientViews;
 
 import javax.swing.BoxLayout;
 import javax.swing.JDialog;
-
-import ClientViews.BotPanelDialogBuy2;
-import ClientViews.CenterPanelBuy;
-import ClientViews.TopPanelDialogBuy2;
-
 import java.awt.event.ActionListener;
 
 public class DialogBuy2 extends JDialog {

@@ -3,10 +3,6 @@ package ClientViews;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
-
-import ClientViews.CenterPanelLeftBillboard;
-import ClientViews.TopPanelLeftBillboard;
-
 import java.awt.BorderLayout;
 
 public class LeftPanelBillboard extends JPanel {

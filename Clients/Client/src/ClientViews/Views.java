@@ -1,24 +1,15 @@
 package ClientViews;
 
 import javax.swing.JFrame;
-
-import ClientViews.CenterPanel1;
-import ClientViews.DialogBillBoard;
-import ClientViews.DialogBuy1;
-import ClientViews.DialogCancel;
-import ClientViews.DialogRanking;
-import ClientViews.TopPanel1;
-
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 
 public class Views extends JFrame {
 
-    private TopPanel1 topPanel1;
-    private CenterPanel1 centerPanel1;
+    private TopPanelMenu topPanel1;
+    private CenterPanelMenu centerPanel1;
     public DialogBuy1 dialogBuy;
     public DialogBillBoard dialogBillBoard;
-    public DialogCancel dialogCancel;
     public DialogRanking dialogRanking;
 
     public Views(ActionListener listener) {
@@ -33,15 +24,13 @@ public class Views extends JFrame {
 
     public void initComponents(ActionListener listener) {
         this.setLayout(new BorderLayout());
-        topPanel1 = new TopPanel1();
-        centerPanel1 = new CenterPanel1(listener);
+        topPanel1 = new TopPanelMenu();
+        centerPanel1 = new CenterPanelMenu(listener);
         dialogBuy = new DialogBuy1(listener);
         dialogBillBoard = new DialogBillBoard(listener);
-        dialogCancel = new DialogCancel(listener);
         dialogRanking = new DialogRanking(listener);
         dialogBuy.setVisible(false);
         dialogBillBoard.setVisible(false);
-        dialogCancel.setVisible(false);
         dialogRanking.setVisible(false);
         this.getContentPane().add(topPanel1, BorderLayout.NORTH);
         this.getContentPane().add(centerPanel1, BorderLayout.CENTER);
@@ -57,22 +46,6 @@ public class Views extends JFrame {
 
     public String getTxtField() {
         return dialogBuy.getTxtField();
-    }
-
-    public void setValue(String value) {
-        dialogBuy.setValue(value);
-    }
-
-    public void setLabelPosition(String value) {
-        dialogBuy.setLabelPosition(value);
-    }
-
-    public String getTxtComboBox() {
-        return dialogBuy.getTxtComboBox();
-    }
-
-    public String getTxtClient() {
-        return dialogBuy.getTxtClient();
     }
 
     public void setTxtFunction1(int id, String format, String filmName, String hour, int cost, boolean confirm) {
@@ -105,22 +78,6 @@ public class Views extends JFrame {
 
     public void setTxtFunction2(String message) {
         dialogBillBoard.setTxtFunction2(message);
-    }
-
-    public String getPosition() {
-        return dialogCancel.getPosition();
-    }
-
-    public String getRow() {
-        return dialogCancel.getRow();
-    }
-
-    public String getColum() {
-        return dialogCancel.getColum();
-    }
-
-    public String getTxtField2() {
-        return dialogCancel.getTxtField();
     }
 
     public void setFilm1(String name, String popularity) {

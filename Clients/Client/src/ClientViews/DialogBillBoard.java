@@ -1,9 +1,6 @@
 package ClientViews;
 
 import javax.swing.JDialog;
-
-import ClientViews.PanelBillboard;
-
 import java.awt.event.ActionListener;
 
 public class DialogBillBoard extends JDialog {

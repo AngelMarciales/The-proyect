@@ -2,14 +2,6 @@ package ClientViews;
 
 import java.awt.Color;
 import javax.swing.JPanel;
-
-import ClientViews.TarjetaLightYear;
-import ClientViews.TarjetaMinions;
-import ClientViews.TarjetaTelefonoNegro;
-import ClientViews.TarjetaThor;
-import ClientViews.TarjetaTopGun;
-import ClientViews.TarjetaVacia;
-
 import java.awt.CardLayout;
 
 public class CenterPanelBillBoard extends JPanel {

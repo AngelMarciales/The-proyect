@@ -32,7 +32,7 @@ public class TopPanelDialogBuy1 extends JPanel {
 
         txtMessageFilm.setForeground(Color.BLACK);
 
-        buttonSelectFilm.setActionCommand("Buscar 1");
+        buttonSelectFilm.setActionCommand("Buscar Funcion");
         buttonSelectFilm.setBackground(Color.WHITE);
         buttonSelectFilm.setForeground(Color.BLACK);
         buttonSelectFilm.setBorderPainted(false);
