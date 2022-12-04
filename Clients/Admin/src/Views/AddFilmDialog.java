@@ -8,7 +8,7 @@ import java.awt.*;
 public class AddFilmDialog extends JDialog {
 
     private AddFilmPanel addFilmPanel;
-    private AcceptAndCancelPanel buttons;
+    private AcceptAndCancelFilmPanel buttons;
 
     public AddFilmDialog(ActionListener listener) {
         this.setSize(600, 450);
@@ -23,7 +23,7 @@ public class AddFilmDialog extends JDialog {
         addFilmPanel = new AddFilmPanel(listener);
         add(addFilmPanel, BorderLayout.CENTER);
 
-        buttons = new AcceptAndCancelPanel(listener);
+        buttons = new AcceptAndCancelFilmPanel(listener);
         add(buttons, BorderLayout.SOUTH);
     }
 

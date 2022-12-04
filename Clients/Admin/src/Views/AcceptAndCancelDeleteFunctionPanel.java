@@ -5,12 +5,12 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import java.awt.event.ActionListener;
 
-public class AcceptAndCancelPanel extends JPanel{
+public class AcceptAndCancelDeleteFunctionPanel extends JPanel{
 
     private JButton accept;
     private JButton cancel;
     
-    public AcceptAndCancelPanel(ActionListener listener){
+    public AcceptAndCancelDeleteFunctionPanel(ActionListener listener){
         initComponents(listener);
     }
 
@@ -19,7 +19,7 @@ public class AcceptAndCancelPanel extends JPanel{
 
         accept = new JButton("Aceptar");
         accept.addActionListener(listener);
-        accept.setActionCommand("Aceptar");
+        accept.setActionCommand("Aceptar3");
         add(accept);
 
         cancel = new JButton("Cancelar");

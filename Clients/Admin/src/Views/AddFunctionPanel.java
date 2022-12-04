@@ -61,17 +61,17 @@ public class AddFunctionPanel extends JPanel{
         add(roomCBox);
     }
 
-    public void addFilmItems(ArrayList<String> films){
+    public void addFilmItems(String[] films){
     	filmCBox.removeAllItems();
-        for (int i = 0; i < films.size(); i++) {
-            filmCBox.addItem(films.get(i));
+        for (int i = 0; i < films.length; i++) {
+            filmCBox.addItem(films[i]);
         }
     }
 
-    public void addRoomItems(ArrayList<String> rooms){
+    public void addRoomItems(String[] rooms){
     	roomCBox.removeAllItems();
-        for (int i = 0; i < rooms.size(); i++) {
-            roomCBox.addItem(rooms.get(i));
+        for (int i = 0; i < rooms.length; i++) {
+            roomCBox.addItem(rooms[i]);
         }
     }
 

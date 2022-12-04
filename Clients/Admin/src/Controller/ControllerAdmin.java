@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.ArrayList;
 
 import com.google.gson.Gson;
 
@@ -22,23 +23,15 @@ public class ControllerAdmin implements ActionListener {
     private Views views;
 
     public ControllerAdmin() {
-        // try {
-        //     socket = new Socket(HOST, PORT);
-        //     input = new DataInputStream(socket.getInputStream());
-        //     output = new DataOutputStream(socket.getOutputStream());
+        try {
+            socket = new Socket(HOST, PORT);
+            input = new DataInputStream(socket.getInputStream());
+            output = new DataOutputStream(socket.getOutputStream());
             views = new Views(this);
-        // } catch (IOException e) {
-        //     e.printStackTrace();
-        // }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
-    // public void run() {
-    //     try {
-    //         output.writeUTF("Admin");
-    //     } catch (Exception e) {
-    //         e.printStackTrace();
-    //     }
-    // }
 
     @Override
     public void actionPerformed(ActionEvent event) {
@@ -46,27 +39,43 @@ public class ControllerAdmin implements ActionListener {
             String source = event.getActionCommand();
             switch (source) {
                 case "Añadir funcion":
-                    // output.writeUTF("Añadir funcion");
                     views.setVisible(false);
                     views.functionPanel.setVisible(true);
+                    output.writeUTF(new Gson().toJson("Añadir funcion"));
+                    String[] lista = new Gson().fromJson(input.readUTF(), String[].class);
+                    views.addFilmItems(lista);
+                    String[] rooms = new String[] { "1", "2", "3" };
+                    views.addRoomItems(rooms);
+                    break;
+                case "Aceptar1":
+                    String[] newFunction = new String[6];
+                    newFunction[0] = views.getID();
+                    newFunction[1] = views.getFormat();
+                    newFunction[2] = views.getFilm();
+                    newFunction[3] = views.getHour();
+                    newFunction[4] = String.valueOf(views.getCost());
+                    newFunction[5] = views.getRoom();
+                    output.writeUTF(new Gson().toJson(newFunction, String[].class));
+                    views.setVisible(true);
+                    views.functionPanel.setVisible(false);
                     break;
                 case "Añadir pelicula":
-                    // output.writeUTF("Añadir pelicula");
+                    output.writeUTF("Añadir pelicula");
                     views.setVisible(false);
                     views.filmPanel.setVisible(true);
                     break;
                 case "Borrar funcion":
-                    // output.writeUTF("Borrar funcion");
+                    output.writeUTF("Borrar funcion");
                     views.setVisible(false);
                     views.deleteFunctionPanel.setVisible(true);
                     break;
                 case "Editar funcion":
-                    // output.writeUTF("Editar funcion");
+                    output.writeUTF("Editar funcion");
                     views.setVisible(false);
                     views.editFunctionPanel.setVisible(true);
                     break;
                 case "Salir":
-                    // output.writeUTF("Salir");
+                    output.writeUTF("Salir");
                     System.exit(0);
                     break;
             }
@@ -78,7 +87,6 @@ public class ControllerAdmin implements ActionListener {
     }
 
     public static void main(String[] args) {
-        ControllerAdmin cA = new ControllerAdmin();
-        // cA.run();
+        new ControllerAdmin();
     }
 }

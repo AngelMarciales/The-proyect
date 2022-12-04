@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 public class EditFunctionDialog extends JDialog {
 
     private EditFunctionPanel editFunctionPanel;
-    private AcceptAndCancelPanel buttons;
+    private AcceptAndCancelEditFunctionPanel buttons;
 
     public EditFunctionDialog(ActionListener listener) {
         this.setSize(300, 300);
@@ -26,7 +26,7 @@ public class EditFunctionDialog extends JDialog {
         editFunctionPanel = new EditFunctionPanel(listener);
         add(editFunctionPanel, BorderLayout.CENTER);
 
-        buttons = new AcceptAndCancelPanel(listener);
+        buttons = new AcceptAndCancelEditFunctionPanel(listener);
         add(buttons, BorderLayout.SOUTH);
     }
 }

@@ -119,8 +119,12 @@ public class ClientThreads extends Thread {
                     output.writeUTF(new Gson().toJson(totalCost));
                     break;
                 case "Añadir funcion":
-
-                    cinema.addFunction(new Function(MAX_PRIORITY, position, null, position, 0, null));
+                    String[] lista = cinema.getFilmsName();
+                    output.writeUTF(new Gson().toJson(lista));
+                    String[] newFunction = new Gson().fromJson(input.readUTF(), String[].class);
+                    Film aux = cinema.searchFilm(newFunction[2]);
+                    Room aux2 = new Room(Integer.parseInt(newFunction[5]));
+                    cinema.addFunction(new Function(Integer.parseInt(newFunction[0]), newFunction[1], aux, newFunction[3], Integer.parseInt(newFunction[4]), aux2));
                     break;
                 case "Añadir pelicula":
                     cinema.addFilm(new Film(res, res));
@@ -145,52 +149,53 @@ public class ClientThreads extends Thread {
 
     public void loadData() {
         try {
-            /* 
-              ArrayList<Function> functionList = new ArrayList<>();
-              Function function1 = new Function(1, "2D", new Film("Thor: Amor y Trueno",
-              "Taika Waititi"), "3pm", 15000,
-              new Room(1));
-              Function function2 = new Function(2, "3D", new Film("Thor: Amor y Trueno",
-              "Taika Waititi"), "6pm", 18000,
-              new Room(1));
-              Function function3 = new Function(3, "2D", new Film("Thor: Amor y Trueno",
-              "Taika Waititi"), "9pm", 15000,
-              new Room(1));
-              Function function4 = new Function(4, "3D", new
-              Film("Minions 2: Nace un Villano", "Kyle Balda"), "4pm",
-              18000,
-             new Room(2));
-              Function function5 = new Function(5, "2D", new
-              Film("Minions 2: Nace un Villano", "Kyle Balda"), "8pm",
-              15000,
-              new Room(2));
-              Function function6 = new Function(6, "2D", new Film("El Telefono Negro",
-              "Scott Derrickson"), "4pm", 15000,
-              new Room(3));
-              Function function7 = new Function(7, "3D", new Film("El Telefono Negro",
-              "Scott Derrickson"), "8pm", 18000,
-              new Room(3));
-              Function function8 = new Function(8, "3D", new Film("Top Gun Maverik",
-              "Joseph Kosinski"), "4pm", 18000,
-              new Room(4));
-              Function function9 = new Function(9, "2D", new Film("Top Gun Maverik",
-              "Joseph Kosinski"), "8pm", 15000,
-              new Room(4));
-              Function function10 = new Function(10, "3D", new Film("Ligthyear",
-              "Angus MacLane"), "3pm", 18000,
-              new Room(5));
-              functionList.add(function1);
-              functionList.add(function2);
-              functionList.add(function3);
-              functionList.add(function4);
-              functionList.add(function5);
-              functionList.add(function6);
-              functionList.add(function7);
-              functionList.add(function8);
-              functionList.add(function9);
-              functionList.add(function10);
-              persistence.writeFunction(functionList);*/
-             
+            /*
+             * ArrayList<Function> functionList = new ArrayList<>();
+             * Function function1 = new Function(1, "2D", new Film("Thor: Amor y Trueno",
+             * "Taika Waititi"), "3pm", 15000,
+             * new Room(1));
+             * Function function2 = new Function(2, "3D", new Film("Thor: Amor y Trueno",
+             * "Taika Waititi"), "6pm", 18000,
+             * new Room(1));
+             * Function function3 = new Function(3, "2D", new Film("Thor: Amor y Trueno",
+             * "Taika Waititi"), "9pm", 15000,
+             * new Room(1));
+             * Function function4 = new Function(4, "3D", new
+             * Film("Minions 2: Nace un Villano", "Kyle Balda"), "4pm",
+             * 18000,
+             * new Room(2));
+             * Function function5 = new Function(5, "2D", new
+             * Film("Minions 2: Nace un Villano", "Kyle Balda"), "8pm",
+             * 15000,
+             * new Room(2));
+             * Function function6 = new Function(6, "2D", new Film("El Telefono Negro",
+             * "Scott Derrickson"), "4pm", 15000,
+             * new Room(3));
+             * Function function7 = new Function(7, "3D", new Film("El Telefono Negro",
+             * "Scott Derrickson"), "8pm", 18000,
+             * new Room(3));
+             * Function function8 = new Function(8, "3D", new Film("Top Gun Maverik",
+             * "Joseph Kosinski"), "4pm", 18000,
+             * new Room(4));
+             * Function function9 = new Function(9, "2D", new Film("Top Gun Maverik",
+             * "Joseph Kosinski"), "8pm", 15000,
+             * new Room(4));
+             * Function function10 = new Function(10, "3D", new Film("Ligthyear",
+             * "Angus MacLane"), "3pm", 18000,
+             * new Room(5));
+             * functionList.add(function1);
+             * functionList.add(function2);
+             * functionList.add(function3);
+             * functionList.add(function4);
+             * functionList.add(function5);
+             * functionList.add(function6);
+             * functionList.add(function7);
+             * functionList.add(function8);
+             * functionList.add(function9);
+             * functionList.add(function10);
+             * persistence.writeFunction(functionList);
+             */
+
             persistence.readFunction();
             persistence.readFilm();
             cinema.loadArchives(persistence.getFuncTionList(), persistence.getFilmList());

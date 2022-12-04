@@ -1,9 +1,10 @@
 package Views;
 
-import javax.swing.JFrame;
-
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
 
 public class Views extends JFrame {
 
@@ -38,5 +39,37 @@ public class Views extends JFrame {
         editFunctionPanel.setVisible(false);
         this.getContentPane().add(imagePanel, BorderLayout.NORTH);
         this.getContentPane().add(mainBottonsPanel, BorderLayout.CENTER);
+    }
+
+    public void addFilmItems(String[] films){
+        functionPanel.addFilmItems(films);
+    }
+
+    public void addRoomItems(String[] rooms){
+    	functionPanel.addRoomItems(rooms);
+    }
+
+    public String getID(){
+        return functionPanel.getID();
+    }
+
+    public String getFormat(){
+        return functionPanel.getFormat();
+    }
+
+    public String getFilm(){
+        return functionPanel.getFilm();
+    }
+
+    public String getHour(){
+        return functionPanel.getHour();
+    }
+
+    public int getCost(){
+        return functionPanel.getCost();
+    }
+
+    public String getRoom(){
+        return functionPanel.getRoom();
     }
 }

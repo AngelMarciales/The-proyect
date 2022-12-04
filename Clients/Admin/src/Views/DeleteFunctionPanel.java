@@ -11,7 +11,7 @@ public class DeleteFunctionPanel extends JDialog {
 
     private JLabel idLabel;
     private JTextField idTxt;
-    private AcceptAndCancelPanel buttons;
+    private AcceptAndCancelDeleteFunctionPanel buttons;
 
     public DeleteFunctionPanel(ActionListener listener) {
         this.setSize(400, 150);
@@ -36,7 +36,7 @@ public class DeleteFunctionPanel extends JDialog {
         idTxt = new JTextField(10);
         add(idTxt, gb);
 
-        buttons = new AcceptAndCancelPanel(listener);
+        buttons = new AcceptAndCancelDeleteFunctionPanel(listener);
         gb.gridx = 1;
         gb.gridy = 1;
         gb.gridwidth = 2;

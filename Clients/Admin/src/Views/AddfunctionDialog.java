@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class AddfunctionDialog extends JDialog {
 
     private AddFunctionPanel addFunctionPanel;
-    private AcceptAndCancelPanel buttons;
+    private AcceptAndCancelFunctionPanel buttons;
 
     public AddfunctionDialog(ActionListener listener) {
         this.setSize(600, 600);
@@ -26,15 +26,15 @@ public class AddfunctionDialog extends JDialog {
         addFunctionPanel = new AddFunctionPanel(listener);
         add(addFunctionPanel, BorderLayout.CENTER);
 
-        buttons = new AcceptAndCancelPanel(listener);
+        buttons = new AcceptAndCancelFunctionPanel(listener);
         add(buttons, BorderLayout.SOUTH);
     }
 
-    public void addFilmItems(ArrayList<String> films){
+    public void addFilmItems(String[] films){
     	addFunctionPanel.addFilmItems(films);
     }
 
-    public void addRoomItems(ArrayList<String> rooms){
+    public void addRoomItems(String[] rooms){
     	addFunctionPanel.addRoomItems(rooms);
     }
 

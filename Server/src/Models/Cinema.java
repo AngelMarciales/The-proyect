@@ -45,6 +45,15 @@ public class Cinema {
         return billboard;
     }
 
+    public String[] getFilmsName() {
+        ArrayList<Film> aux = filmList.inOrder();
+        String[] billboard = new String[aux.size()];
+        for (int i = 0; i < aux.size(); i++) {
+            billboard[i] = aux.get(i).getName();
+        }
+        return billboard;
+    }
+
     public Function[] getFunctionList() {
         ArrayList<Function> aux = functionList.inOrder();
         Function[] functions = new Function[aux.size()];
@@ -67,6 +76,20 @@ public class Cinema {
 
     }
 
+    public Film searchFilm(String name) {
+        Film selectedFilm = null;
+        if (filmList.exist(new Film(name, null))) {
+            ArrayList<Film> fList = filmList.inOrder();
+            for (int i = 0; i < fList.size(); i++) {
+                Film aux = fList.get(i);
+                if (aux.equals(new Film(name, null))) {
+                    selectedFilm = aux;
+                }
+            }
+        }
+        return selectedFilm;
+    }
+
     public int buyTicket(ArrayList<Integer> id, Function function) {
         int cost = 0;
         if (functionList.exist(function)) {
@@ -75,7 +98,7 @@ public class Cinema {
             }
             filmList.search(functionList.search(function).getFilm()).setPopularityMax(id.size());
             tourChairs(id, function, true);
-            cost = functionList.search(function).getCost()*id.size();
+            cost = functionList.search(function).getCost() * id.size();
             System.out.println(cost);
         }
         return cost;
