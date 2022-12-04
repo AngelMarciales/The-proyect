@@ -120,18 +120,20 @@ public class ClientThreads extends Thread {
                     Save();
                     break;
                 case "Añadir funcion":
-                    String[] lista = cinema.getFilmsName();
-                    output.writeUTF(new Gson().toJson(lista));
+                    String[] function = cinema.getFilmsName();
+                    output.writeUTF(new Gson().toJson(function));
                     String[] newFunction = new Gson().fromJson(input.readUTF(), String[].class);
                     Film aux = cinema.searchFilm(newFunction[2]);
                     Room aux2 = new Room(Integer.parseInt(newFunction[5]));
-                    cinema.addFunction(new Function(Integer.parseInt(newFunction[0]), newFunction[1], aux, newFunction[3], Integer.parseInt(newFunction[4]), aux2));
+                    cinema.addFunction(new Function(Integer.parseInt(newFunction[0]), newFunction[1], aux,
+                            newFunction[3], Integer.parseInt(newFunction[4]), aux2));
                     break;
                 case "Añadir pelicula":
-                    cinema.addFilm(new Film(res, res));
+                    String[] film = new Gson().fromJson(input.readUTF(), String[].class);
+                    cinema.addFilm(new Film(film[0], film[1]));
                     break;
                 case "Borrar funcion":
-                    cinema.deleteFunction(MAX_PRIORITY);
+                    cinema.deleteFunction(input.readInt());
                     break;
                 case "Editar funcion":
                     cinema.editFunction(null);

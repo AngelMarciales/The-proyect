@@ -3,7 +3,6 @@ package Views;
 import javax.swing.*;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class AddFunctionPanel extends JPanel{
 

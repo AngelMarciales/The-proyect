@@ -43,7 +43,7 @@ public class DeleteFunctionPanel extends JDialog {
         add(buttons, gb);
     }
 
-    public int getID() {
+    public int getDeleteID() {
         return Integer.parseInt(idTxt.getText());
     }
 }

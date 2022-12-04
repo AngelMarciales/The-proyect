@@ -8,12 +8,14 @@ import javax.swing.*;
 
 public class EditFunctionPanel extends JPanel {
 
+    private JLabel idLabel;
     private JLabel formatLabel;
     private JLabel filmLabel;
     private JLabel hourLabel;
     private JLabel costLabel;
     private JLabel roomLabel;
 
+    private JTextField idTxt;
     private JTextField hourTxt;
     private JTextField costTxt;
     private JComboBox<String> formatCBox;
@@ -29,6 +31,12 @@ public class EditFunctionPanel extends JPanel {
     public void initComponents(ActionListener listener) {
         this.setBackground(Color.WHITE);
         setLayout(new BorderLayout());
+
+        idLabel = new JLabel("ID");
+        add(idLabel);
+        idTxt = new JTextField(10);
+        add(idTxt);
+
         formatLabel = new JLabel("Formato");
         add(formatLabel);
         formatCBox = new JComboBox<String>();

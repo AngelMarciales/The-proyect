@@ -2,7 +2,6 @@ package Views;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
@@ -71,5 +70,17 @@ public class Views extends JFrame {
 
     public String getRoom(){
         return functionPanel.getRoom();
+    }
+
+    public String getName(){
+        return filmPanel.getName();
+    }
+
+    public String getDirector(){
+        return filmPanel.getDirector();
+    }
+
+    public int getDeleteID() {
+        return deleteFunctionPanel.getDeleteID();
     }
 }

@@ -4,7 +4,6 @@ import java.awt.*;
 import javax.swing.JDialog;
 import java.awt.Color;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class AddfunctionDialog extends JDialog {
 

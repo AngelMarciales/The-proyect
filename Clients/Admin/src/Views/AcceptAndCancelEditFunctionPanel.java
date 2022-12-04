@@ -19,7 +19,7 @@ public class AcceptAndCancelEditFunctionPanel extends JPanel{
 
         accept = new JButton("Aceptar");
         accept.addActionListener(listener);
-        accept.setActionCommand("Aceptar1");
+        accept.setActionCommand("Aceptar4");
         add(accept);
 
         cancel = new JButton("Cancelar");
