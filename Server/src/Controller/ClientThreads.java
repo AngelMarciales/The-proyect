@@ -117,6 +117,7 @@ public class ClientThreads extends Thread {
                         }
                     }
                     output.writeUTF(new Gson().toJson(totalCost));
+                    Save();
                     break;
                 case "Añadir funcion":
                     String[] lista = cinema.getFilmsName();
@@ -206,12 +207,12 @@ public class ClientThreads extends Thread {
     }
 
     public void Save() {
-        // try {
-        // persistence.writeFunction(cinema.getFunctionList());
-        // persistence.writeFilm(cinema.getFilmList());
-        // } catch (FileNotFoundException e) {
-        // e.printStackTrace();
-        // }
+        try {
+            persistence.writeFunction(cinema.getArrayFunctions());
+            persistence.writeFilm(cinema.getArrayListFilms());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void addItems() {
