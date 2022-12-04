@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 public class DialogBuy1 extends JDialog {
 
     public DialogBuy2 dialog2;
+    public DialogBuy3 dialog3;
     private TopPanelDialogBuy1 topPanelBuy1;
     private CenterPanelDialogBuy1 centerPanelDialogBuy1;
     private BotPanelDialogBuy1 botPanelDialogBuy1;
@@ -25,6 +26,8 @@ public class DialogBuy1 extends JDialog {
         setLayout(new BorderLayout());
         dialog2 = new DialogBuy2(listener);
         dialog2.setVisible(false);
+        dialog3 = new DialogBuy3(listener);
+        dialog3.setVisible(false);
         topPanelBuy1 = new TopPanelDialogBuy1(listener);
         centerPanelDialogBuy1 = new CenterPanelDialogBuy1();
         botPanelDialogBuy1 = new BotPanelDialogBuy1(listener);
@@ -42,7 +45,7 @@ public class DialogBuy1 extends JDialog {
         return topPanelBuy1.getTxtComboBox();
     }
 
-    public void setColor(String position, boolean confirm) {
+    public void setColor(int position, boolean confirm) {
         dialog2.setColor(position, confirm);
     }
 
@@ -54,4 +57,7 @@ public class DialogBuy1 extends JDialog {
         centerPanelDialogBuy1.setFunctions(id, format, filmName, hour, cost, room);
     }
 
+    public void setValue(int value){
+        dialog3.setValue(value);
+    }
 }

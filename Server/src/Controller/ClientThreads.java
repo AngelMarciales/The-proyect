@@ -6,12 +6,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.ArrayList;
-
 import com.google.gson.Gson;
-
 import Models.Cinema;
 import Models.Film;
 import Models.Function;
+import Models.Room;
 import Persistance.Persistence;
 
 public class ClientThreads extends Thread {
@@ -21,7 +20,8 @@ public class ClientThreads extends Thread {
     private Socket socket;
     private Cinema cinema;
     private Persistence persistence;
-    private int cost;
+    private int idFilm;
+    private int totalCost;
     private String position;
 
     public ClientThreads(Socket serverSocket, Cinema cinema) {
@@ -40,79 +40,102 @@ public class ClientThreads extends Thread {
 
     public void run() {
         try {
-            boolean exit = true;
-            while (exit) {
-                String res = new Gson().fromJson(input.readUTF(), String.class);
-                switch (res) {
-                    case "Comprar Boleta":
-                        output.writeUTF(new Gson().toJson(cinema.calculatePopularity()));
-                        break;
-                    case "Ver Cartelera":
-                        break;
-                    case "Ver Rankings":
-                        String[] filmsnames = cinema.calculatePopularity();
-                        int[] popularity = new int[cinema.calculatePopularity().length];
-                        for (int i = 0; i < filmsnames.length; i++) {
-                            for (int j = 0; j < cinema.getBillboard().length; j++) {
-                                if (filmsnames[i].equalsIgnoreCase(cinema.getBillboard()[j].getName())) {
-                                    popularity[i] = cinema.getBillboard()[j].getPopularity();
-                                }
+            String res = new Gson().fromJson(input.readUTF(), String.class);
+            switch (res) {
+                case "Comprar Boleta":
+                    output.writeUTF(new Gson().toJson(cinema.calculatePopularity()));
+                    break;
+                case "Ver Cartelera":
+                    break;
+                case "Ver Rankings":
+                    String[] filmsnames = cinema.calculatePopularity();
+                    int[] popularity = new int[cinema.calculatePopularity().length];
+                    for (int i = 0; i < filmsnames.length; i++) {
+                        for (int j = 0; j < cinema.getBillboard().length; j++) {
+                            if (filmsnames[i].equalsIgnoreCase(cinema.getBillboard()[j].getName())) {
+                                popularity[i] = cinema.getBillboard()[j].getPopularity();
                             }
                         }
-                        output.writeUTF(new Gson().toJson(filmsnames));
-                        output.writeUTF(new Gson().toJson(popularity));
-                        break;
-                    case "Buscar Funcion":
-                        ArrayList<Function> functionList = new ArrayList<>();
-                        String name = new Gson().fromJson(input.readUTF(), String.class);
-                        for (int i = 0; i < cinema.getFunctionList().length; i++) {
-                            if (cinema.getFunctionList()[i].getFilm().getName().equalsIgnoreCase(name)) {
-                                functionList.add(cinema.getFunctionList()[i]);
-                            }
+                    }
+                    output.writeUTF(new Gson().toJson(filmsnames));
+                    output.writeUTF(new Gson().toJson(popularity));
+                    break;
+                case "Buscar Funcion":
+                    ArrayList<Function> functionList = new ArrayList<>();
+                    String name = new Gson().fromJson(input.readUTF(), String.class);
+                    for (int i = 0; i < cinema.getFunctionList().length; i++) {
+                        if (cinema.getFunctionList()[i].getFilm().getName().equalsIgnoreCase(name)) {
+                            functionList.add(cinema.getFunctionList()[i]);
                         }
+                    }
 
-                        int[] id = new int[functionList.size()];
-                        String[] format = new String[functionList.size()];
-                        String[] filmName = new String[functionList.size()];
-                        String[] hour = new String[functionList.size()];
-                        int[] room = new int[functionList.size()];
-                        int[] cost = new int[functionList.size()];
+                    int[] id = new int[functionList.size()];
+                    String[] format = new String[functionList.size()];
+                    String[] filmName = new String[functionList.size()];
+                    String[] hour = new String[functionList.size()];
+                    int[] room = new int[functionList.size()];
+                    int[] cost = new int[functionList.size()];
 
-                        for (int i = 0; i < functionList.size(); i++) {
-                            id[i] = functionList.get(i).getId();
-                            format[i] = functionList.get(i).getFormat();
-                            filmName[i] = functionList.get(i).getFilm().getName();
-                            hour[i] = functionList.get(i).getHour();
-                            room[i] = functionList.get(i).getRoom().getId();
-                            cost[i] = functionList.get(i).getCost();
+                    for (int i = 0; i < functionList.size(); i++) {
+                        id[i] = functionList.get(i).getId();
+                        format[i] = functionList.get(i).getFormat();
+                        filmName[i] = functionList.get(i).getFilm().getName();
+                        hour[i] = functionList.get(i).getHour();
+                        room[i] = functionList.get(i).getRoom().getId();
+                        cost[i] = functionList.get(i).getCost();
+                    }
+
+                    output.writeUTF(new Gson().toJson(id));
+                    output.writeUTF(new Gson().toJson(format));
+                    output.writeUTF(new Gson().toJson(filmName));
+                    output.writeUTF(new Gson().toJson(hour));
+                    output.writeUTF(new Gson().toJson(room));
+                    output.writeUTF(new Gson().toJson(cost));
+                    break;
+                case "Seleccionar silla":
+                    Room rooms = null;
+                    idFilm = Integer.parseInt(new Gson().fromJson(input.readUTF(), String.class));
+                    for (int i = 0; i < cinema.getFunctionList().length; i++) {
+                        if (cinema.getFunctionList()[i].getId() == idFilm) {
+                            rooms = cinema.getFunctionList()[i].getRoom();
+                            break;
                         }
+                    }
+                    output.writeUTF(new Gson().toJson(rooms));
+                    break;
+                case "Aceptar 1":
+                    ArrayList<Integer> newChairsBought = new ArrayList<>();
+                    int[] newChairsBoughtAux = new Gson().fromJson(input.readUTF(), int[].class);
+                    for (int i = 0; i < newChairsBoughtAux.length; i++) {
+                        newChairsBought.add(newChairsBoughtAux[i]);
+                    }
+                    for (int i = 0; i < cinema.getFunctionList().length; i++) {
+                        if (cinema.getFunctionList()[i].getId() == idFilm) {
+                            totalCost = cinema.buyTicket(newChairsBought, cinema.getFunctionList()[i]);
+                            System.out.println(totalCost);
+                            break;
+                        }
+                    }
+                    output.writeUTF(new Gson().toJson(totalCost));
+                    break;
+                case "Añadir funcion":
 
-                        output.writeUTF(new Gson().toJson(id));
-                        output.writeUTF(new Gson().toJson(format));
-                        output.writeUTF(new Gson().toJson(filmName));
-                        output.writeUTF(new Gson().toJson(hour));
-                        output.writeUTF(new Gson().toJson(room));
-                        output.writeUTF(new Gson().toJson(cost));
-                        break;
-                    case "Añadir funcion":
-                        cinema.addFunction(new Function(MAX_PRIORITY, position, null, position, 0, null));
-                        break;
-                    case "Añadir pelicula":
-                        cinema.addFilm(new Film(res, res, res));
-                        break;
-                    case "Borrar funcion":
-                        cinema.deleteFunction(MAX_PRIORITY);
-                        break;
-                    case "Editar funcion":
-                        cinema.editFunction(null);
-                        break;
-                    case "Salir":
-                        exit = false;
-                        socket.close();
-                        break;
-                }
-                break;
+                    cinema.addFunction(new Function(MAX_PRIORITY, position, null, position, 0, null));
+                    break;
+                case "Añadir pelicula":
+                    cinema.addFilm(new Film(res, res));
+                    break;
+                case "Borrar funcion":
+                    cinema.deleteFunction(MAX_PRIORITY);
+                    break;
+                case "Editar funcion":
+                    cinema.editFunction(null);
+                    break;
+                case "Salir":
+                    socket.close();
+                    break;
             }
+            run();
         } catch (
 
         Exception e) {
@@ -122,6 +145,52 @@ public class ClientThreads extends Thread {
 
     public void loadData() {
         try {
+            /* 
+              ArrayList<Function> functionList = new ArrayList<>();
+              Function function1 = new Function(1, "2D", new Film("Thor: Amor y Trueno",
+              "Taika Waititi"), "3pm", 15000,
+              new Room(1));
+              Function function2 = new Function(2, "3D", new Film("Thor: Amor y Trueno",
+              "Taika Waititi"), "6pm", 18000,
+              new Room(1));
+              Function function3 = new Function(3, "2D", new Film("Thor: Amor y Trueno",
+              "Taika Waititi"), "9pm", 15000,
+              new Room(1));
+              Function function4 = new Function(4, "3D", new
+              Film("Minions 2: Nace un Villano", "Kyle Balda"), "4pm",
+              18000,
+             new Room(2));
+              Function function5 = new Function(5, "2D", new
+              Film("Minions 2: Nace un Villano", "Kyle Balda"), "8pm",
+              15000,
+              new Room(2));
+              Function function6 = new Function(6, "2D", new Film("El Telefono Negro",
+              "Scott Derrickson"), "4pm", 15000,
+              new Room(3));
+              Function function7 = new Function(7, "3D", new Film("El Telefono Negro",
+              "Scott Derrickson"), "8pm", 18000,
+              new Room(3));
+              Function function8 = new Function(8, "3D", new Film("Top Gun Maverik",
+              "Joseph Kosinski"), "4pm", 18000,
+              new Room(4));
+              Function function9 = new Function(9, "2D", new Film("Top Gun Maverik",
+              "Joseph Kosinski"), "8pm", 15000,
+              new Room(4));
+              Function function10 = new Function(10, "3D", new Film("Ligthyear",
+              "Angus MacLane"), "3pm", 18000,
+              new Room(5));
+              functionList.add(function1);
+              functionList.add(function2);
+              functionList.add(function3);
+              functionList.add(function4);
+              functionList.add(function5);
+              functionList.add(function6);
+              functionList.add(function7);
+              functionList.add(function8);
+              functionList.add(function9);
+              functionList.add(function10);
+              persistence.writeFunction(functionList);*/
+             
             persistence.readFunction();
             persistence.readFilm();
             cinema.loadArchives(persistence.getFuncTionList(), persistence.getFilmList());

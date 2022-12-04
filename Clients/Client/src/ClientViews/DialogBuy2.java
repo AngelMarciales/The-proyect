@@ -28,11 +28,11 @@ public class DialogBuy2 extends JDialog {
         add(botPanel);
     }
 
-    public void setColor(String position, boolean confirm) {
+    public void setColor(int position, boolean confirm) {
         centerpanel.setColorChair(position, confirm);
     }
 
-    public String getColor(String position) {
+    public String getColor(int position) {
         return centerpanel.getColor(position);
     }
 }

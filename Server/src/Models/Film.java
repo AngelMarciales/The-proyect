@@ -6,7 +6,7 @@ public class Film implements Comparable<Film>{
     private String director;
     private int popularity;
 
-    public Film (String name, String director, String image){
+    public Film (String name, String director){
         this.name = name;
         this.director = director;
     }

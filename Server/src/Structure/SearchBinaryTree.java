@@ -52,13 +52,13 @@ public class SearchBinaryTree<T> implements Iterable<T> {
             exist = true;
         } else {
             if (comparator.compare(aux.getValue(), value) > 0) {
-                if (comparator.compare(aux.getLeft().getValue(), value) == 0) {
+                if (aux.getLeft() != null && comparator.compare(aux.getLeft().getValue(), value) == 0) {
                     exist = true;
                 } else if (aux.getLeft() != null && !exist) {
                     auxExist(value, aux.getLeft());
                 }
-            } else if (comparator.compare(aux.getValue(), value) < 0) {
-                if (comparator.compare(aux.getRight().getValue(), value) == 0) {
+            } else if ( comparator.compare(aux.getValue(), value) < 0) {
+                if (aux.getRight() != null &&comparator.compare(aux.getRight().getValue(), value) == 0) {
                     exist = true;
                 } else if (aux.getRight() != null && !exist) {
                     auxExist(value, aux.getRight());

@@ -4,10 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
-
 import Models.Film;
 import Models.Function;
 

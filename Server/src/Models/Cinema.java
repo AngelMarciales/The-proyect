@@ -67,38 +67,18 @@ public class Cinema {
 
     }
 
-    public int buyTicket(int id, Function function) {
-        int cost = 0;
-        if (!functionList.exist(function)) {
-            filmList.search(functionList.search(function).getFilm()).setPopularityMax(1);
-            tourChairs(id, function, true);
-            cost = functionList.search(function).getCost();
-        }
-        return cost;
-    }
-
     public int buyTicket(ArrayList<Integer> id, Function function) {
         int cost = 0;
-        if (!functionList.exist(function)) {
+        if (functionList.exist(function)) {
+            for (int i = 0; i < id.size(); i++) {
+                System.out.println(id.get(i));
+            }
             filmList.search(functionList.search(function).getFilm()).setPopularityMax(id.size());
             tourChairs(id, function, true);
-            cost += functionList.search(function).getCost();
+            cost = functionList.search(function).getCost()*id.size();
+            System.out.println(cost);
         }
         return cost;
-    }
-
-    public void tourChairs(int id, Function function, boolean confirm) {
-        if (!functionList.exist(function)) {
-            Chair[][] aux = functionList.search(function).getRoom().getChairList();
-            for (int i = 0; i < aux.length; i++) {
-                for (int j = 0; j < aux[i].length; j++) {
-                    if (aux[i][j].getId() == id) {
-                        aux[i][j].setState(confirm);
-                        break;
-                    }
-                }
-            }
-        }
     }
 
     public void tourChairs(ArrayList<Integer> id, Function function, boolean confirm) {
@@ -108,6 +88,8 @@ public class Cinema {
                 for (int j2 = 0; j2 < id.size(); j2++) {
                     if (aux[i][j].getId() == id.get(j2)) {
                         aux[i][j].setState(confirm);
+                        System.out.println(aux[i][j].getState());
+                        System.out.println(aux[i][j].getId());
                     }
                 }
 

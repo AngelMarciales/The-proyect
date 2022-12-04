@@ -7,92 +7,193 @@
             "director": "Taika Waititi",
             "popularity": 0
         },
-        "hourAndRoom": "Sala 1: 3pm",
+        "hour": "3pm",
         "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
+        "room": {
+            "id": 1,
+            "chairList": [
+                [
+                    {
+                        "id": 1,
+                        "state": false
+                    },
+                    {
+                        "id": 2,
+                        "state": false
+                    },
+                    {
+                        "id": 3,
+                        "state": false
+                    },
+                    {
+                        "id": 4,
+                        "state": false
+                    },
+                    {
+                        "id": 5,
+                        "state": false
+                    },
+                    {
+                        "id": 6,
+                        "state": false
+                    },
+                    {
+                        "id": 7,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 8,
+                        "state": false
+                    },
+                    {
+                        "id": 9,
+                        "state": false
+                    },
+                    {
+                        "id": 10,
+                        "state": false
+                    },
+                    {
+                        "id": 11,
+                        "state": false
+                    },
+                    {
+                        "id": 12,
+                        "state": false
+                    },
+                    {
+                        "id": 13,
+                        "state": false
+                    },
+                    {
+                        "id": 14,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 15,
+                        "state": false
+                    },
+                    {
+                        "id": 16,
+                        "state": false
+                    },
+                    {
+                        "id": 17,
+                        "state": false
+                    },
+                    {
+                        "id": 18,
+                        "state": false
+                    },
+                    {
+                        "id": 19,
+                        "state": false
+                    },
+                    {
+                        "id": 20,
+                        "state": false
+                    },
+                    {
+                        "id": 21,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 22,
+                        "state": false
+                    },
+                    {
+                        "id": 23,
+                        "state": false
+                    },
+                    {
+                        "id": 24,
+                        "state": false
+                    },
+                    {
+                        "id": 25,
+                        "state": false
+                    },
+                    {
+                        "id": 26,
+                        "state": false
+                    },
+                    {
+                        "id": 27,
+                        "state": false
+                    },
+                    {
+                        "id": 28,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 29,
+                        "state": false
+                    },
+                    {
+                        "id": 30,
+                        "state": false
+                    },
+                    {
+                        "id": 31,
+                        "state": false
+                    },
+                    {
+                        "id": 32,
+                        "state": false
+                    },
+                    {
+                        "id": 33,
+                        "state": false
+                    },
+                    {
+                        "id": 34,
+                        "state": false
+                    },
+                    {
+                        "id": 35,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 36,
+                        "state": false
+                    },
+                    {
+                        "id": 37,
+                        "state": false
+                    },
+                    {
+                        "id": 38,
+                        "state": false
+                    },
+                    {
+                        "id": 39,
+                        "state": false
+                    },
+                    {
+                        "id": 40,
+                        "state": false
+                    },
+                    {
+                        "id": 41,
+                        "state": false
+                    },
+                    {
+                        "id": 42,
+                        "state": false
+                    }
+                ]
             ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
+        }
     },
     {
         "id": 2,
@@ -102,92 +203,193 @@
             "director": "Taika Waititi",
             "popularity": 0
         },
-        "hourAndRoom": "Sala 1: 6pm",
+        "hour": "6pm",
         "cost": 18000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
+        "room": {
+            "id": 1,
+            "chairList": [
+                [
+                    {
+                        "id": 1,
+                        "state": false
+                    },
+                    {
+                        "id": 2,
+                        "state": false
+                    },
+                    {
+                        "id": 3,
+                        "state": false
+                    },
+                    {
+                        "id": 4,
+                        "state": false
+                    },
+                    {
+                        "id": 5,
+                        "state": false
+                    },
+                    {
+                        "id": 6,
+                        "state": false
+                    },
+                    {
+                        "id": 7,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 8,
+                        "state": false
+                    },
+                    {
+                        "id": 9,
+                        "state": false
+                    },
+                    {
+                        "id": 10,
+                        "state": false
+                    },
+                    {
+                        "id": 11,
+                        "state": false
+                    },
+                    {
+                        "id": 12,
+                        "state": false
+                    },
+                    {
+                        "id": 13,
+                        "state": false
+                    },
+                    {
+                        "id": 14,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 15,
+                        "state": false
+                    },
+                    {
+                        "id": 16,
+                        "state": false
+                    },
+                    {
+                        "id": 17,
+                        "state": false
+                    },
+                    {
+                        "id": 18,
+                        "state": false
+                    },
+                    {
+                        "id": 19,
+                        "state": false
+                    },
+                    {
+                        "id": 20,
+                        "state": false
+                    },
+                    {
+                        "id": 21,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 22,
+                        "state": false
+                    },
+                    {
+                        "id": 23,
+                        "state": false
+                    },
+                    {
+                        "id": 24,
+                        "state": false
+                    },
+                    {
+                        "id": 25,
+                        "state": false
+                    },
+                    {
+                        "id": 26,
+                        "state": false
+                    },
+                    {
+                        "id": 27,
+                        "state": false
+                    },
+                    {
+                        "id": 28,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 29,
+                        "state": false
+                    },
+                    {
+                        "id": 30,
+                        "state": false
+                    },
+                    {
+                        "id": 31,
+                        "state": false
+                    },
+                    {
+                        "id": 32,
+                        "state": false
+                    },
+                    {
+                        "id": 33,
+                        "state": false
+                    },
+                    {
+                        "id": 34,
+                        "state": false
+                    },
+                    {
+                        "id": 35,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 36,
+                        "state": false
+                    },
+                    {
+                        "id": 37,
+                        "state": false
+                    },
+                    {
+                        "id": 38,
+                        "state": false
+                    },
+                    {
+                        "id": 39,
+                        "state": false
+                    },
+                    {
+                        "id": 40,
+                        "state": false
+                    },
+                    {
+                        "id": 41,
+                        "state": false
+                    },
+                    {
+                        "id": 42,
+                        "state": false
+                    }
+                ]
             ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
+        }
     },
     {
         "id": 3,
@@ -195,94 +397,195 @@
         "film": {
             "name": "Thor: Amor y Trueno",
             "director": "Taika Waititi",
-            "popularity": 1
+            "popularity": 0
         },
-        "hourAndRoom": "Sala 1: 9pm",
+        "hour": "9pm",
         "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
+        "room": {
+            "id": 1,
+            "chairList": [
+                [
+                    {
+                        "id": 1,
+                        "state": false
+                    },
+                    {
+                        "id": 2,
+                        "state": false
+                    },
+                    {
+                        "id": 3,
+                        "state": false
+                    },
+                    {
+                        "id": 4,
+                        "state": false
+                    },
+                    {
+                        "id": 5,
+                        "state": false
+                    },
+                    {
+                        "id": 6,
+                        "state": false
+                    },
+                    {
+                        "id": 7,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 8,
+                        "state": false
+                    },
+                    {
+                        "id": 9,
+                        "state": false
+                    },
+                    {
+                        "id": 10,
+                        "state": false
+                    },
+                    {
+                        "id": 11,
+                        "state": false
+                    },
+                    {
+                        "id": 12,
+                        "state": false
+                    },
+                    {
+                        "id": 13,
+                        "state": false
+                    },
+                    {
+                        "id": 14,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 15,
+                        "state": false
+                    },
+                    {
+                        "id": 16,
+                        "state": false
+                    },
+                    {
+                        "id": 17,
+                        "state": false
+                    },
+                    {
+                        "id": 18,
+                        "state": false
+                    },
+                    {
+                        "id": 19,
+                        "state": false
+                    },
+                    {
+                        "id": 20,
+                        "state": false
+                    },
+                    {
+                        "id": 21,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 22,
+                        "state": false
+                    },
+                    {
+                        "id": 23,
+                        "state": false
+                    },
+                    {
+                        "id": 24,
+                        "state": false
+                    },
+                    {
+                        "id": 25,
+                        "state": false
+                    },
+                    {
+                        "id": 26,
+                        "state": false
+                    },
+                    {
+                        "id": 27,
+                        "state": false
+                    },
+                    {
+                        "id": 28,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 29,
+                        "state": false
+                    },
+                    {
+                        "id": 30,
+                        "state": false
+                    },
+                    {
+                        "id": 31,
+                        "state": false
+                    },
+                    {
+                        "id": 32,
+                        "state": false
+                    },
+                    {
+                        "id": 33,
+                        "state": false
+                    },
+                    {
+                        "id": 34,
+                        "state": false
+                    },
+                    {
+                        "id": 35,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 36,
+                        "state": false
+                    },
+                    {
+                        "id": 37,
+                        "state": false
+                    },
+                    {
+                        "id": 38,
+                        "state": false
+                    },
+                    {
+                        "id": 39,
+                        "state": false
+                    },
+                    {
+                        "id": 40,
+                        "state": false
+                    },
+                    {
+                        "id": 41,
+                        "state": false
+                    },
+                    {
+                        "id": 42,
+                        "state": false
+                    }
+                ]
             ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
+        }
     },
     {
         "id": 4,
@@ -292,92 +595,193 @@
             "director": "Kyle Balda",
             "popularity": 0
         },
-        "hourAndRoom": "Sala 2: 4pm",
+        "hour": "4pm",
         "cost": 18000,
-        "chairsLeft": [
-            [
-                true,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
+        "room": {
+            "id": 2,
+            "chairList": [
+                [
+                    {
+                        "id": 1,
+                        "state": false
+                    },
+                    {
+                        "id": 2,
+                        "state": false
+                    },
+                    {
+                        "id": 3,
+                        "state": false
+                    },
+                    {
+                        "id": 4,
+                        "state": false
+                    },
+                    {
+                        "id": 5,
+                        "state": false
+                    },
+                    {
+                        "id": 6,
+                        "state": false
+                    },
+                    {
+                        "id": 7,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 8,
+                        "state": false
+                    },
+                    {
+                        "id": 9,
+                        "state": false
+                    },
+                    {
+                        "id": 10,
+                        "state": false
+                    },
+                    {
+                        "id": 11,
+                        "state": false
+                    },
+                    {
+                        "id": 12,
+                        "state": false
+                    },
+                    {
+                        "id": 13,
+                        "state": false
+                    },
+                    {
+                        "id": 14,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 15,
+                        "state": false
+                    },
+                    {
+                        "id": 16,
+                        "state": false
+                    },
+                    {
+                        "id": 17,
+                        "state": false
+                    },
+                    {
+                        "id": 18,
+                        "state": false
+                    },
+                    {
+                        "id": 19,
+                        "state": false
+                    },
+                    {
+                        "id": 20,
+                        "state": false
+                    },
+                    {
+                        "id": 21,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 22,
+                        "state": false
+                    },
+                    {
+                        "id": 23,
+                        "state": false
+                    },
+                    {
+                        "id": 24,
+                        "state": false
+                    },
+                    {
+                        "id": 25,
+                        "state": false
+                    },
+                    {
+                        "id": 26,
+                        "state": false
+                    },
+                    {
+                        "id": 27,
+                        "state": false
+                    },
+                    {
+                        "id": 28,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 29,
+                        "state": false
+                    },
+                    {
+                        "id": 30,
+                        "state": false
+                    },
+                    {
+                        "id": 31,
+                        "state": false
+                    },
+                    {
+                        "id": 32,
+                        "state": false
+                    },
+                    {
+                        "id": 33,
+                        "state": false
+                    },
+                    {
+                        "id": 34,
+                        "state": false
+                    },
+                    {
+                        "id": 35,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 36,
+                        "state": false
+                    },
+                    {
+                        "id": 37,
+                        "state": false
+                    },
+                    {
+                        "id": 38,
+                        "state": false
+                    },
+                    {
+                        "id": 39,
+                        "state": false
+                    },
+                    {
+                        "id": 40,
+                        "state": false
+                    },
+                    {
+                        "id": 41,
+                        "state": false
+                    },
+                    {
+                        "id": 42,
+                        "state": false
+                    }
+                ]
             ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
+        }
     },
     {
         "id": 5,
@@ -385,94 +789,195 @@
         "film": {
             "name": "Minions 2: Nace un Villano",
             "director": "Kyle Balda",
-            "popularity": 4
+            "popularity": 0
         },
-        "hourAndRoom": "Sala 2: 8pm",
+        "hour": "8pm",
         "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                true
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
+        "room": {
+            "id": 2,
+            "chairList": [
+                [
+                    {
+                        "id": 1,
+                        "state": false
+                    },
+                    {
+                        "id": 2,
+                        "state": false
+                    },
+                    {
+                        "id": 3,
+                        "state": false
+                    },
+                    {
+                        "id": 4,
+                        "state": false
+                    },
+                    {
+                        "id": 5,
+                        "state": false
+                    },
+                    {
+                        "id": 6,
+                        "state": false
+                    },
+                    {
+                        "id": 7,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 8,
+                        "state": false
+                    },
+                    {
+                        "id": 9,
+                        "state": false
+                    },
+                    {
+                        "id": 10,
+                        "state": false
+                    },
+                    {
+                        "id": 11,
+                        "state": false
+                    },
+                    {
+                        "id": 12,
+                        "state": false
+                    },
+                    {
+                        "id": 13,
+                        "state": false
+                    },
+                    {
+                        "id": 14,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 15,
+                        "state": false
+                    },
+                    {
+                        "id": 16,
+                        "state": false
+                    },
+                    {
+                        "id": 17,
+                        "state": false
+                    },
+                    {
+                        "id": 18,
+                        "state": false
+                    },
+                    {
+                        "id": 19,
+                        "state": false
+                    },
+                    {
+                        "id": 20,
+                        "state": false
+                    },
+                    {
+                        "id": 21,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 22,
+                        "state": false
+                    },
+                    {
+                        "id": 23,
+                        "state": false
+                    },
+                    {
+                        "id": 24,
+                        "state": false
+                    },
+                    {
+                        "id": 25,
+                        "state": false
+                    },
+                    {
+                        "id": 26,
+                        "state": false
+                    },
+                    {
+                        "id": 27,
+                        "state": false
+                    },
+                    {
+                        "id": 28,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 29,
+                        "state": false
+                    },
+                    {
+                        "id": 30,
+                        "state": false
+                    },
+                    {
+                        "id": 31,
+                        "state": false
+                    },
+                    {
+                        "id": 32,
+                        "state": false
+                    },
+                    {
+                        "id": 33,
+                        "state": false
+                    },
+                    {
+                        "id": 34,
+                        "state": false
+                    },
+                    {
+                        "id": 35,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 36,
+                        "state": false
+                    },
+                    {
+                        "id": 37,
+                        "state": false
+                    },
+                    {
+                        "id": 38,
+                        "state": false
+                    },
+                    {
+                        "id": 39,
+                        "state": false
+                    },
+                    {
+                        "id": 40,
+                        "state": false
+                    },
+                    {
+                        "id": 41,
+                        "state": false
+                    },
+                    {
+                        "id": 42,
+                        "state": false
+                    }
+                ]
             ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
+        }
     },
     {
         "id": 6,
@@ -480,94 +985,195 @@
         "film": {
             "name": "El Telefono Negro",
             "director": "Scott Derrickson",
-            "popularity": 1
+            "popularity": 0
         },
-        "hourAndRoom": "Sala 3: 4pm",
+        "hour": "4pm",
         "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                true,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
+        "room": {
+            "id": 3,
+            "chairList": [
+                [
+                    {
+                        "id": 1,
+                        "state": false
+                    },
+                    {
+                        "id": 2,
+                        "state": false
+                    },
+                    {
+                        "id": 3,
+                        "state": false
+                    },
+                    {
+                        "id": 4,
+                        "state": false
+                    },
+                    {
+                        "id": 5,
+                        "state": false
+                    },
+                    {
+                        "id": 6,
+                        "state": false
+                    },
+                    {
+                        "id": 7,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 8,
+                        "state": false
+                    },
+                    {
+                        "id": 9,
+                        "state": false
+                    },
+                    {
+                        "id": 10,
+                        "state": false
+                    },
+                    {
+                        "id": 11,
+                        "state": false
+                    },
+                    {
+                        "id": 12,
+                        "state": false
+                    },
+                    {
+                        "id": 13,
+                        "state": false
+                    },
+                    {
+                        "id": 14,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 15,
+                        "state": false
+                    },
+                    {
+                        "id": 16,
+                        "state": false
+                    },
+                    {
+                        "id": 17,
+                        "state": false
+                    },
+                    {
+                        "id": 18,
+                        "state": false
+                    },
+                    {
+                        "id": 19,
+                        "state": false
+                    },
+                    {
+                        "id": 20,
+                        "state": false
+                    },
+                    {
+                        "id": 21,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 22,
+                        "state": false
+                    },
+                    {
+                        "id": 23,
+                        "state": false
+                    },
+                    {
+                        "id": 24,
+                        "state": false
+                    },
+                    {
+                        "id": 25,
+                        "state": false
+                    },
+                    {
+                        "id": 26,
+                        "state": false
+                    },
+                    {
+                        "id": 27,
+                        "state": false
+                    },
+                    {
+                        "id": 28,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 29,
+                        "state": false
+                    },
+                    {
+                        "id": 30,
+                        "state": false
+                    },
+                    {
+                        "id": 31,
+                        "state": false
+                    },
+                    {
+                        "id": 32,
+                        "state": false
+                    },
+                    {
+                        "id": 33,
+                        "state": false
+                    },
+                    {
+                        "id": 34,
+                        "state": false
+                    },
+                    {
+                        "id": 35,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 36,
+                        "state": false
+                    },
+                    {
+                        "id": 37,
+                        "state": false
+                    },
+                    {
+                        "id": 38,
+                        "state": false
+                    },
+                    {
+                        "id": 39,
+                        "state": false
+                    },
+                    {
+                        "id": 40,
+                        "state": false
+                    },
+                    {
+                        "id": 41,
+                        "state": false
+                    },
+                    {
+                        "id": 42,
+                        "state": false
+                    }
+                ]
             ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
+        }
     },
     {
         "id": 7,
@@ -577,92 +1183,193 @@
             "director": "Scott Derrickson",
             "popularity": 0
         },
-        "hourAndRoom": "Sala 3: 8pm",
+        "hour": "8pm",
         "cost": 18000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
+        "room": {
+            "id": 3,
+            "chairList": [
+                [
+                    {
+                        "id": 1,
+                        "state": false
+                    },
+                    {
+                        "id": 2,
+                        "state": false
+                    },
+                    {
+                        "id": 3,
+                        "state": false
+                    },
+                    {
+                        "id": 4,
+                        "state": false
+                    },
+                    {
+                        "id": 5,
+                        "state": false
+                    },
+                    {
+                        "id": 6,
+                        "state": false
+                    },
+                    {
+                        "id": 7,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 8,
+                        "state": false
+                    },
+                    {
+                        "id": 9,
+                        "state": false
+                    },
+                    {
+                        "id": 10,
+                        "state": false
+                    },
+                    {
+                        "id": 11,
+                        "state": false
+                    },
+                    {
+                        "id": 12,
+                        "state": false
+                    },
+                    {
+                        "id": 13,
+                        "state": false
+                    },
+                    {
+                        "id": 14,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 15,
+                        "state": false
+                    },
+                    {
+                        "id": 16,
+                        "state": false
+                    },
+                    {
+                        "id": 17,
+                        "state": false
+                    },
+                    {
+                        "id": 18,
+                        "state": false
+                    },
+                    {
+                        "id": 19,
+                        "state": false
+                    },
+                    {
+                        "id": 20,
+                        "state": false
+                    },
+                    {
+                        "id": 21,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 22,
+                        "state": false
+                    },
+                    {
+                        "id": 23,
+                        "state": false
+                    },
+                    {
+                        "id": 24,
+                        "state": false
+                    },
+                    {
+                        "id": 25,
+                        "state": false
+                    },
+                    {
+                        "id": 26,
+                        "state": false
+                    },
+                    {
+                        "id": 27,
+                        "state": false
+                    },
+                    {
+                        "id": 28,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 29,
+                        "state": false
+                    },
+                    {
+                        "id": 30,
+                        "state": false
+                    },
+                    {
+                        "id": 31,
+                        "state": false
+                    },
+                    {
+                        "id": 32,
+                        "state": false
+                    },
+                    {
+                        "id": 33,
+                        "state": false
+                    },
+                    {
+                        "id": 34,
+                        "state": false
+                    },
+                    {
+                        "id": 35,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 36,
+                        "state": false
+                    },
+                    {
+                        "id": 37,
+                        "state": false
+                    },
+                    {
+                        "id": 38,
+                        "state": false
+                    },
+                    {
+                        "id": 39,
+                        "state": false
+                    },
+                    {
+                        "id": 40,
+                        "state": false
+                    },
+                    {
+                        "id": 41,
+                        "state": false
+                    },
+                    {
+                        "id": 42,
+                        "state": false
+                    }
+                ]
             ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
+        }
     },
     {
         "id": 8,
@@ -670,94 +1377,195 @@
         "film": {
             "name": "Top Gun Maverik",
             "director": "Joseph Kosinski",
-            "popularity": 1
+            "popularity": 0
         },
-        "hourAndRoom": "Sala 4: 4pm",
+        "hour": "4pm",
         "cost": 18000,
-        "chairsLeft": [
-            [
-                true,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
+        "room": {
+            "id": 4,
+            "chairList": [
+                [
+                    {
+                        "id": 1,
+                        "state": false
+                    },
+                    {
+                        "id": 2,
+                        "state": false
+                    },
+                    {
+                        "id": 3,
+                        "state": false
+                    },
+                    {
+                        "id": 4,
+                        "state": false
+                    },
+                    {
+                        "id": 5,
+                        "state": false
+                    },
+                    {
+                        "id": 6,
+                        "state": false
+                    },
+                    {
+                        "id": 7,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 8,
+                        "state": false
+                    },
+                    {
+                        "id": 9,
+                        "state": false
+                    },
+                    {
+                        "id": 10,
+                        "state": false
+                    },
+                    {
+                        "id": 11,
+                        "state": false
+                    },
+                    {
+                        "id": 12,
+                        "state": false
+                    },
+                    {
+                        "id": 13,
+                        "state": false
+                    },
+                    {
+                        "id": 14,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 15,
+                        "state": false
+                    },
+                    {
+                        "id": 16,
+                        "state": false
+                    },
+                    {
+                        "id": 17,
+                        "state": false
+                    },
+                    {
+                        "id": 18,
+                        "state": false
+                    },
+                    {
+                        "id": 19,
+                        "state": false
+                    },
+                    {
+                        "id": 20,
+                        "state": false
+                    },
+                    {
+                        "id": 21,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 22,
+                        "state": false
+                    },
+                    {
+                        "id": 23,
+                        "state": false
+                    },
+                    {
+                        "id": 24,
+                        "state": false
+                    },
+                    {
+                        "id": 25,
+                        "state": false
+                    },
+                    {
+                        "id": 26,
+                        "state": false
+                    },
+                    {
+                        "id": 27,
+                        "state": false
+                    },
+                    {
+                        "id": 28,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 29,
+                        "state": false
+                    },
+                    {
+                        "id": 30,
+                        "state": false
+                    },
+                    {
+                        "id": 31,
+                        "state": false
+                    },
+                    {
+                        "id": 32,
+                        "state": false
+                    },
+                    {
+                        "id": 33,
+                        "state": false
+                    },
+                    {
+                        "id": 34,
+                        "state": false
+                    },
+                    {
+                        "id": 35,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 36,
+                        "state": false
+                    },
+                    {
+                        "id": 37,
+                        "state": false
+                    },
+                    {
+                        "id": 38,
+                        "state": false
+                    },
+                    {
+                        "id": 39,
+                        "state": false
+                    },
+                    {
+                        "id": 40,
+                        "state": false
+                    },
+                    {
+                        "id": 41,
+                        "state": false
+                    },
+                    {
+                        "id": 42,
+                        "state": false
+                    }
+                ]
             ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
+        }
     },
     {
         "id": 9,
@@ -767,92 +1575,193 @@
             "director": "Joseph Kosinski",
             "popularity": 0
         },
-        "hourAndRoom": "Sala 4: 8pm",
+        "hour": "8pm",
         "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
+        "room": {
+            "id": 4,
+            "chairList": [
+                [
+                    {
+                        "id": 1,
+                        "state": false
+                    },
+                    {
+                        "id": 2,
+                        "state": false
+                    },
+                    {
+                        "id": 3,
+                        "state": false
+                    },
+                    {
+                        "id": 4,
+                        "state": false
+                    },
+                    {
+                        "id": 5,
+                        "state": false
+                    },
+                    {
+                        "id": 6,
+                        "state": false
+                    },
+                    {
+                        "id": 7,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 8,
+                        "state": false
+                    },
+                    {
+                        "id": 9,
+                        "state": false
+                    },
+                    {
+                        "id": 10,
+                        "state": false
+                    },
+                    {
+                        "id": 11,
+                        "state": false
+                    },
+                    {
+                        "id": 12,
+                        "state": false
+                    },
+                    {
+                        "id": 13,
+                        "state": false
+                    },
+                    {
+                        "id": 14,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 15,
+                        "state": false
+                    },
+                    {
+                        "id": 16,
+                        "state": false
+                    },
+                    {
+                        "id": 17,
+                        "state": false
+                    },
+                    {
+                        "id": 18,
+                        "state": false
+                    },
+                    {
+                        "id": 19,
+                        "state": false
+                    },
+                    {
+                        "id": 20,
+                        "state": false
+                    },
+                    {
+                        "id": 21,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 22,
+                        "state": false
+                    },
+                    {
+                        "id": 23,
+                        "state": false
+                    },
+                    {
+                        "id": 24,
+                        "state": false
+                    },
+                    {
+                        "id": 25,
+                        "state": false
+                    },
+                    {
+                        "id": 26,
+                        "state": false
+                    },
+                    {
+                        "id": 27,
+                        "state": false
+                    },
+                    {
+                        "id": 28,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 29,
+                        "state": false
+                    },
+                    {
+                        "id": 30,
+                        "state": false
+                    },
+                    {
+                        "id": 31,
+                        "state": false
+                    },
+                    {
+                        "id": 32,
+                        "state": false
+                    },
+                    {
+                        "id": 33,
+                        "state": false
+                    },
+                    {
+                        "id": 34,
+                        "state": false
+                    },
+                    {
+                        "id": 35,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 36,
+                        "state": false
+                    },
+                    {
+                        "id": 37,
+                        "state": false
+                    },
+                    {
+                        "id": 38,
+                        "state": false
+                    },
+                    {
+                        "id": 39,
+                        "state": false
+                    },
+                    {
+                        "id": 40,
+                        "state": false
+                    },
+                    {
+                        "id": 41,
+                        "state": false
+                    },
+                    {
+                        "id": 42,
+                        "state": false
+                    }
+                ]
             ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
+        }
     },
     {
         "id": 10,
@@ -862,1991 +1771,192 @@
             "director": "Angus MacLane",
             "popularity": 0
         },
-        "hourAndRoom": "Sala 5: 3pm",
+        "hour": "3pm",
         "cost": 18000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
+        "room": {
+            "id": 5,
+            "chairList": [
+                [
+                    {
+                        "id": 1,
+                        "state": false
+                    },
+                    {
+                        "id": 2,
+                        "state": false
+                    },
+                    {
+                        "id": 3,
+                        "state": false
+                    },
+                    {
+                        "id": 4,
+                        "state": false
+                    },
+                    {
+                        "id": 5,
+                        "state": false
+                    },
+                    {
+                        "id": 6,
+                        "state": false
+                    },
+                    {
+                        "id": 7,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 8,
+                        "state": false
+                    },
+                    {
+                        "id": 9,
+                        "state": false
+                    },
+                    {
+                        "id": 10,
+                        "state": false
+                    },
+                    {
+                        "id": 11,
+                        "state": false
+                    },
+                    {
+                        "id": 12,
+                        "state": false
+                    },
+                    {
+                        "id": 13,
+                        "state": false
+                    },
+                    {
+                        "id": 14,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 15,
+                        "state": false
+                    },
+                    {
+                        "id": 16,
+                        "state": false
+                    },
+                    {
+                        "id": 17,
+                        "state": false
+                    },
+                    {
+                        "id": 18,
+                        "state": false
+                    },
+                    {
+                        "id": 19,
+                        "state": false
+                    },
+                    {
+                        "id": 20,
+                        "state": false
+                    },
+                    {
+                        "id": 21,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 22,
+                        "state": false
+                    },
+                    {
+                        "id": 23,
+                        "state": false
+                    },
+                    {
+                        "id": 24,
+                        "state": false
+                    },
+                    {
+                        "id": 25,
+                        "state": false
+                    },
+                    {
+                        "id": 26,
+                        "state": false
+                    },
+                    {
+                        "id": 27,
+                        "state": false
+                    },
+                    {
+                        "id": 28,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 29,
+                        "state": false
+                    },
+                    {
+                        "id": 30,
+                        "state": false
+                    },
+                    {
+                        "id": 31,
+                        "state": false
+                    },
+                    {
+                        "id": 32,
+                        "state": false
+                    },
+                    {
+                        "id": 33,
+                        "state": false
+                    },
+                    {
+                        "id": 34,
+                        "state": false
+                    },
+                    {
+                        "id": 35,
+                        "state": false
+                    }
+                ],
+                [
+                    {
+                        "id": 36,
+                        "state": false
+                    },
+                    {
+                        "id": 37,
+                        "state": false
+                    },
+                    {
+                        "id": 38,
+                        "state": false
+                    },
+                    {
+                        "id": 39,
+                        "state": false
+                    },
+                    {
+                        "id": 40,
+                        "state": false
+                    },
+                    {
+                        "id": 41,
+                        "state": false
+                    },
+                    {
+                        "id": 42,
+                        "state": false
+                    }
+                ]
             ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 1,
-        "format": "2D",
-        "film": {
-            "name": "Thor: Amor y Trueno",
-            "director": "Taika Waititi",
-            "popularity": 0
-        },
-        "hourAndRoom": "Sala 1: 3pm",
-        "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 2,
-        "format": "3D",
-        "film": {
-            "name": "Thor: Amor y Trueno",
-            "director": "Taika Waititi",
-            "popularity": 0
-        },
-        "hourAndRoom": "Sala 1: 6pm",
-        "cost": 18000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 3,
-        "format": "2D",
-        "film": {
-            "name": "Thor: Amor y Trueno",
-            "director": "Taika Waititi",
-            "popularity": 1
-        },
-        "hourAndRoom": "Sala 1: 9pm",
-        "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 4,
-        "format": "3D",
-        "film": {
-            "name": "Minions 2: Nace un Villano",
-            "director": "Kyle Balda",
-            "popularity": 0
-        },
-        "hourAndRoom": "Sala 2: 4pm",
-        "cost": 18000,
-        "chairsLeft": [
-            [
-                true,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 5,
-        "format": "2D",
-        "film": {
-            "name": "Minions 2: Nace un Villano",
-            "director": "Kyle Balda",
-            "popularity": 4
-        },
-        "hourAndRoom": "Sala 2: 8pm",
-        "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                true
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 6,
-        "format": "2D",
-        "film": {
-            "name": "El Telefono Negro",
-            "director": "Scott Derrickson",
-            "popularity": 1
-        },
-        "hourAndRoom": "Sala 3: 4pm",
-        "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                true,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 7,
-        "format": "3D",
-        "film": {
-            "name": "El Telefono Negro",
-            "director": "Scott Derrickson",
-            "popularity": 0
-        },
-        "hourAndRoom": "Sala 3: 8pm",
-        "cost": 18000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 8,
-        "format": "3D",
-        "film": {
-            "name": "Top Gun Maverik",
-            "director": "Joseph Kosinski",
-            "popularity": 1
-        },
-        "hourAndRoom": "Sala 4: 4pm",
-        "cost": 18000,
-        "chairsLeft": [
-            [
-                true,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 9,
-        "format": "2D",
-        "film": {
-            "name": "Top Gun Maverik",
-            "director": "Joseph Kosinski",
-            "popularity": 0
-        },
-        "hourAndRoom": "Sala 4: 8pm",
-        "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 10,
-        "format": "3D",
-        "film": {
-            "name": "Ligthyear",
-            "director": "Angus MacLane",
-            "popularity": 0
-        },
-        "hourAndRoom": "Sala 5: 3pm",
-        "cost": 18000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 1,
-        "format": "2D",
-        "film": {
-            "name": "Thor: Amor y Trueno",
-            "director": "Taika Waititi",
-            "popularity": 0
-        },
-        "hourAndRoom": "Sala 1: 3pm",
-        "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                true,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 2,
-        "format": "3D",
-        "film": {
-            "name": "Thor: Amor y Trueno",
-            "director": "Taika Waititi",
-            "popularity": 0
-        },
-        "hourAndRoom": "Sala 1: 6pm",
-        "cost": 18000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 3,
-        "format": "2D",
-        "film": {
-            "name": "Thor: Amor y Trueno",
-            "director": "Taika Waititi",
-            "popularity": 1
-        },
-        "hourAndRoom": "Sala 1: 9pm",
-        "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 4,
-        "format": "3D",
-        "film": {
-            "name": "Minions 2: Nace un Villano",
-            "director": "Kyle Balda",
-            "popularity": 0
-        },
-        "hourAndRoom": "Sala 2: 4pm",
-        "cost": 18000,
-        "chairsLeft": [
-            [
-                true,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 5,
-        "format": "2D",
-        "film": {
-            "name": "Minions 2: Nace un Villano",
-            "director": "Kyle Balda",
-            "popularity": 4
-        },
-        "hourAndRoom": "Sala 2: 8pm",
-        "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                true
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 6,
-        "format": "2D",
-        "film": {
-            "name": "El Telefono Negro",
-            "director": "Scott Derrickson",
-            "popularity": 1
-        },
-        "hourAndRoom": "Sala 3: 4pm",
-        "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                true,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 7,
-        "format": "3D",
-        "film": {
-            "name": "El Telefono Negro",
-            "director": "Scott Derrickson",
-            "popularity": 0
-        },
-        "hourAndRoom": "Sala 3: 8pm",
-        "cost": 18000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 8,
-        "format": "3D",
-        "film": {
-            "name": "Top Gun Maverik",
-            "director": "Joseph Kosinski",
-            "popularity": 1
-        },
-        "hourAndRoom": "Sala 4: 4pm",
-        "cost": 18000,
-        "chairsLeft": [
-            [
-                true,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 9,
-        "format": "2D",
-        "film": {
-            "name": "Top Gun Maverik",
-            "director": "Joseph Kosinski",
-            "popularity": 0
-        },
-        "hourAndRoom": "Sala 4: 8pm",
-        "cost": 15000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
-    },
-    {
-        "id": 10,
-        "format": "3D",
-        "film": {
-            "name": "Ligthyear",
-            "director": "Angus MacLane",
-            "popularity": 0
-        },
-        "hourAndRoom": "Sala 5: 3pm",
-        "cost": 18000,
-        "chairsLeft": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ],
-        "chairsCenter": [
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ],
-            [
-                false,
-                false,
-                false
-            ]
-        ],
-        "chairsRigth": [
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ],
-            [
-                false,
-                false
-            ]
-        ]
+        }
     }
 ]

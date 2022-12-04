@@ -23,7 +23,7 @@ public class BotPanelDialogRanking extends JPanel {
         buttonAcept.setFocusable(false);
         buttonAcept.setBorderPainted(false);
 
-        buttonAcept.setActionCommand("Aceptar 2");
+        buttonAcept.setActionCommand("Aceptar 3");
 
         add(buttonAcept);
 

@@ -15,12 +15,13 @@ public class BotPanelDialogBuy2 extends JPanel {
 
     public void initComponents(ActionListener listener) {
         this.setBackground(Color.WHITE);
-        buttonConfirm = new JButton("Siguiente");
+        buttonConfirm = new JButton("Aceptar");
 
         buttonConfirm.setBackground(Color.WHITE);
         buttonConfirm.setForeground(Color.BLACK);
         buttonConfirm.setFocusable(false);
         buttonConfirm.setBorderPainted(false);
+        buttonConfirm.setActionCommand("Aceptar 1");
 
         add(buttonConfirm);
 

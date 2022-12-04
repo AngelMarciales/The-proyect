@@ -44,7 +44,7 @@ public class Views extends JFrame {
         return dialogBuy.getTxtComboBox();
     }
 
-    public void setColor(String position, boolean confirm) {
+    public void setColor(int position, boolean confirm) {
         dialogBuy.setColor(position, confirm);
     }
 
@@ -64,6 +64,10 @@ public class Views extends JFrame {
         dialogBillBoard.show(a);
     }
 
+    public void setValue(int value){
+        dialogBuy.setValue(value);
+    }
+
     public String getTxtComboBox2() {
         return dialogBillBoard.getTxtComboBox();
     }
@@ -79,4 +83,5 @@ public class Views extends JFrame {
     public void setRanking(String[] filmList, int[] popularity) {
         dialogRanking.setRanking(filmList, popularity);
     }
+
 }
