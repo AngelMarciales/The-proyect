@@ -54,6 +54,14 @@ public class Cinema {
         return functions;
     }
 
+    public ArrayList<Function> getArrayFunctions(){
+        return functionList.inOrder();
+    }
+
+    public ArrayList<Film> getArrayListFilms(){
+        return filmList.inOrder();
+    }
+
     public void deleteFunction(int id) {
         ArrayList<Function> functionInOrder = functionList.inOrder();
         for (int i = 0; i < functionInOrder.size(); i++) {

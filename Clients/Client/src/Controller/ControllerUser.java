@@ -106,6 +106,7 @@ public class ControllerUser implements ActionListener {
                         positionAux[i] = positions.get(i);
                     }
                     output.writeUTF(new Gson().toJson(positionAux));
+                    positions.clear();
                     views.setValue(new Gson().fromJson(input.readUTF(), Integer.class));
                     views.dialogBuy.dialog3.setVisible(true);
                     break;

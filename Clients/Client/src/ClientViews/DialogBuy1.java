@@ -14,7 +14,7 @@ public class DialogBuy1 extends JDialog {
     private BotPanelDialogBuy1 botPanelDialogBuy1;
 
     public DialogBuy1(ActionListener listener) {
-        this.setSize(400, 250);
+        this.setSize(380, 250);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         initComponents(listener);

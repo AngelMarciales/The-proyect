@@ -30,9 +30,14 @@ public class CenterPanelDialogBuy1 extends JPanel {
     }
 
     public void setFunctions(int[] id, String[] format, String[] filmName, String[] hour, int[] cost, int[] room) {
-        for (int i = 0; i < id.length; i++) {
-            functions[i].setText(
-                    id[i] + " " + filmName[i] + " " + format[i] + " " + hour[i] + " " + room[i] + " " + cost[i]);
+        for (int i = 0; i < functions.length; i++) {
+            if(i < id.length){
+                functions[i].setText(
+                    id[i] + " " + filmName[i] + "  " + format[i] + "  Sala: " + room[i] + " " + hour[i] +  "  Valor: " + cost[i]);
+            }else{
+                functions[i].setText("              ");
+            }
+            
         }
     }
 }

@@ -108,13 +108,13 @@ public class SearchBinaryTree<T> implements Iterable<T> {
                 if (comparator.compare(aux.getLeft().getValue(), value) == 0) {
                     nodeValue = aux.getLeft().getValue();
                 } else if (aux.getLeft() != null) {
-                    auxExist(value, aux.getLeft());
+                    nodeValue = auxSearch(value, aux.getLeft());
                 }
             } else if (comparator.compare(aux.getValue(), value) < 0) {
                 if (comparator.compare(aux.getRight().getValue(), value) == 0) {
                     nodeValue = aux.getRight().getValue();
                 } else if (aux.getRight() != null) {
-                    auxExist(value, aux.getRight());
+                    nodeValue = auxSearch(value, aux.getRight());
                 }
             }
         }
