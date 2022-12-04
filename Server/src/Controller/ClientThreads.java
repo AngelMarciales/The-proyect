@@ -42,90 +42,80 @@ public class ClientThreads extends Thread {
         try {
             boolean exit = true;
             while (exit) {
-                switch (input.readUTF()) {
-                    case "Cliente":
-                        String res = new Gson().fromJson(input.readUTF(), String.class);
-                        switch (res) {
-                            case "Comprar Boleta":
-                                output.writeUTF(new Gson().toJson(cinema.calculatePopularity()));
-                                break;
-                            case "Ver Cartelera":
-                                break;
-                            case "Ver Rankings":
-                                String[] filmsnames = cinema.calculatePopularity();
-                                int[] popularity = new int[cinema.calculatePopularity().length];
-                                for (int i = 0; i < filmsnames.length; i++) {
-                                    for (int j = 0; j < cinema.getBillboard().length; j++) {
-                                        if (filmsnames[i].equalsIgnoreCase(cinema.getBillboard()[j].getName())) {
-                                            popularity[i] = cinema.getBillboard()[j].getPopularity();
-                                        }
-                                    }
-                                }
-                                output.writeUTF(new Gson().toJson(filmsnames));
-                                output.writeUTF(new Gson().toJson(popularity));
-                                break;
-                            case "Salir":
-                                exit = false;
-                                socket.close();
-                                break;
-                            case "Buscar Funcion":
-                                ArrayList<Function> functionList = new ArrayList<>();
-                                String name = new Gson().fromJson(input.readUTF(), String.class);
-                                for (int i = 0; i < cinema.getFunctionList().length; i++) {
-                                    if (cinema.getFunctionList()[i].getFilm().getName().equalsIgnoreCase(name)) {
-                                        functionList.add(cinema.getFunctionList()[i]);
-                                    }
-                                }
-
-                                int[] id = new int[functionList.size()];
-                                String[] format = new String[functionList.size()];
-                                String[] filmName = new String[functionList.size()];
-                                String[] hour = new String[functionList.size()];
-                                int[] room = new int[functionList.size()];
-                                int[] cost = new int[functionList.size()];
-
-                                for (int i = 0; i < functionList.size(); i++) {
-                                    id[i] = functionList.get(i).getId();
-                                    format[i] = functionList.get(i).getFormat();
-                                    filmName[i] = functionList.get(i).getFilm().getName();
-                                    hour[i] = functionList.get(i).getHour();
-                                    room[i] = functionList.get(i).getRoom().getId();
-                                    cost[i] = functionList.get(i).getCost();
-                                }
-
-                                output.writeUTF(new Gson().toJson(id));
-                                output.writeUTF(new Gson().toJson(format));
-                                output.writeUTF(new Gson().toJson(filmName));
-                                output.writeUTF(new Gson().toJson(hour));
-                                output.writeUTF(new Gson().toJson(room));
-                                output.writeUTF(new Gson().toJson(cost));
-                                break;
-                        }
+                String res = new Gson().fromJson(input.readUTF(), String.class);
+                switch (res) {
+                    case "Comprar Boleta":
+                        output.writeUTF(new Gson().toJson(cinema.calculatePopularity()));
                         break;
-                    case "Admin":
-                        String response = input.readUTF();
-                        switch (response) {
-                            case "Añadir funcion":
-                                cinema.addFunction(new Function(MAX_PRIORITY, position, null, position, cost, null));
-                                break;
-                            case "Añadir pelicula":
-                                cinema.addFilm(new Film(response, response, response));
-                                break;
-                            case "Borrar funcion":
-                                cinema.deleteFunction(MAX_PRIORITY);
-                                break;
-                            case "Editar funcion":
-                                cinema.editFunction(null);
-                                break;
-                            case "Salir":
-                                exit = false;
-                                socket.close();
-                                break;
+                    case "Ver Cartelera":
+                        break;
+                    case "Ver Rankings":
+                        String[] filmsnames = cinema.calculatePopularity();
+                        int[] popularity = new int[cinema.calculatePopularity().length];
+                        for (int i = 0; i < filmsnames.length; i++) {
+                            for (int j = 0; j < cinema.getBillboard().length; j++) {
+                                if (filmsnames[i].equalsIgnoreCase(cinema.getBillboard()[j].getName())) {
+                                    popularity[i] = cinema.getBillboard()[j].getPopularity();
+                                }
+                            }
                         }
+                        output.writeUTF(new Gson().toJson(filmsnames));
+                        output.writeUTF(new Gson().toJson(popularity));
+                        break;
+                    case "Buscar Funcion":
+                        ArrayList<Function> functionList = new ArrayList<>();
+                        String name = new Gson().fromJson(input.readUTF(), String.class);
+                        for (int i = 0; i < cinema.getFunctionList().length; i++) {
+                            if (cinema.getFunctionList()[i].getFilm().getName().equalsIgnoreCase(name)) {
+                                functionList.add(cinema.getFunctionList()[i]);
+                            }
+                        }
+
+                        int[] id = new int[functionList.size()];
+                        String[] format = new String[functionList.size()];
+                        String[] filmName = new String[functionList.size()];
+                        String[] hour = new String[functionList.size()];
+                        int[] room = new int[functionList.size()];
+                        int[] cost = new int[functionList.size()];
+
+                        for (int i = 0; i < functionList.size(); i++) {
+                            id[i] = functionList.get(i).getId();
+                            format[i] = functionList.get(i).getFormat();
+                            filmName[i] = functionList.get(i).getFilm().getName();
+                            hour[i] = functionList.get(i).getHour();
+                            room[i] = functionList.get(i).getRoom().getId();
+                            cost[i] = functionList.get(i).getCost();
+                        }
+
+                        output.writeUTF(new Gson().toJson(id));
+                        output.writeUTF(new Gson().toJson(format));
+                        output.writeUTF(new Gson().toJson(filmName));
+                        output.writeUTF(new Gson().toJson(hour));
+                        output.writeUTF(new Gson().toJson(room));
+                        output.writeUTF(new Gson().toJson(cost));
+                        break;
+                    case "Añadir funcion":
+                        cinema.addFunction(new Function(MAX_PRIORITY, position, null, position, null, null));
+                        break;
+                    case "Añadir pelicula":
+                        cinema.addFilm(new Film(res, res, res));
+                        break;
+                    case "Borrar funcion":
+                        cinema.deleteFunction(MAX_PRIORITY);
+                        break;
+                    case "Editar funcion":
+                        cinema.editFunction(null);
+                        break;
+                    case "Salir":
+                        exit = false;
+                        socket.close();
                         break;
                 }
+                break;
             }
-        } catch (Exception e) {
+        } catch (
+
+        Exception e) {
             e.printStackTrace();
         }
     }
