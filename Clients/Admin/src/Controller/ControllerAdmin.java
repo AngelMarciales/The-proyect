@@ -67,6 +67,7 @@ public class ControllerAdmin implements ActionListener {
                     break;
                 case "Salir":
                     // output.writeUTF("Salir");
+                    System.exit(0);
                     break;
             }
 

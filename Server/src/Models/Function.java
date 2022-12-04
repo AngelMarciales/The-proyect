@@ -22,6 +22,30 @@ public class Function implements Comparable<Function>{
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
+
+    public void setFilm(Film film) {
+        this.film = film;
+    }
+
+    public void setHour(String hour) {
+        this.hour = hour;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
     public String getFormat() {
         return format;
     }
