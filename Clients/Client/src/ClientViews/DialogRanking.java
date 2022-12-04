@@ -12,7 +12,7 @@ public class DialogRanking extends JDialog {
     private BotPanelDialogRanking botPanelDialogRanking;
 
     public DialogRanking(ActionListener listener) {
-        this.setSize(300, 300);
+        this.setSize(300, 350);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         initComponents(listener);
@@ -31,23 +31,7 @@ public class DialogRanking extends JDialog {
         add(botPanelDialogRanking, BorderLayout.SOUTH);
     }
 
-    public void setFilm1(String name, String popularity) {
-        centerPanelDialogRanking.setFilm1(name, popularity);
-    }
-
-    public void setFilm2(String name, String popularity) {
-        centerPanelDialogRanking.setFilm2(name, popularity);
-    }
-
-    public void setFilm3(String name, String popularity) {
-        centerPanelDialogRanking.setFilm3(name, popularity);
-    }
-
-    public void setFilm4(String name, String popularity) {
-        centerPanelDialogRanking.setFilm4(name, popularity);
-    }
-
-    public void setFilm5(String name, String popularity) {
-        centerPanelDialogRanking.setFilm5(name, popularity);
+    public void setRanking(String[] filmList, int[] popularity) {
+        centerPanelDialogRanking.setRanking(filmList, popularity);
     }
 }

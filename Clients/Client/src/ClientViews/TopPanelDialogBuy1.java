@@ -48,8 +48,10 @@ public class TopPanelDialogBuy1 extends JPanel {
         buttonSelectFilm.addActionListener(listener);
     }
 
-    public void addItems(String item) {
-        filmList.addItem(item);
+    public void addItems(String[] items) {
+        for (int i = 0; i < items.length; i++) {
+            filmList.addItem(items[i]);
+        }
     }
 
     public String getTxtComboBox() {

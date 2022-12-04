@@ -7,45 +7,82 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.util.ArrayList;
-
+import com.google.gson.Gson;
 import ClientViews.Views;
-import Models.Film;
-import Models.Function;
 
 public class ControllerUser implements ActionListener {
 
-    /*private static final int PORT = 1234;
+    private static final int PORT = 1234;
     private static final String HOST = "localhost";
     private DataInputStream input;
     private DataOutputStream output;
-    private Socket socket;*/
+    private Socket socket;
     private Views views;
 
     public ControllerUser() throws UnknownHostException, IOException {
-        //socket = new Socket(HOST, PORT);
-        //output = new DataOutputStream(socket.getOutputStream());
-        //input = new DataInputStream(socket.getInputStream());
+        socket = new Socket(HOST, PORT);
+        output = new DataOutputStream(socket.getOutputStream());
+        input = new DataInputStream(socket.getInputStream());
         views = new Views(this);
+        output.writeUTF("Cliente");
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         String source = e.getActionCommand();
-        ArrayList<Function> functions = null;
-        ArrayList<Film> films = null;
         switch (source) {
-            case "Button 1":
-                views.dialogBuy.setVisible(true);
+            case "Comprar Boleta":
+                try {
+                    views.dialogBuy.setVisible(true);
+                    output.writeUTF(new Gson().toJson("Comprar Boleta"));
+                    String[] filmList = new Gson().fromJson(input.readUTF(), String[].class);
+                    views.addItems(filmList);
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+
                 break;
-            case "Button 2":
+            case "Ver Cartelera":
+                try {
+                    output.writeUTF(new Gson().toJson("Ver Cartelera"));
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
                 views.dialogBillBoard.setVisible(true);
                 break;
-            case "Button 3":
-                views.dialogRanking.setVisible(true);
+            case "Ver Rankings":
+                try {
+                    views.dialogRanking.setVisible(true);
+                    output.writeUTF(new Gson().toJson("Ver Rankings"));
+                    String[] filmList = new Gson().fromJson(input.readUTF(), String[].class);
+                    int[] popularity = new Gson().fromJson(input.readUTF(), int[].class);
+                    views.setRanking(filmList, popularity);
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
                 break;
-            case "Button 4":
+            case "Salir":
+                try {
+                    output.writeUTF(new Gson().toJson("Salir"));
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
                 System.exit(0);
+                break;
+            case "Buscar Funcion":
+                try {
+                    output.writeUTF(new Gson().toJson("Buscar Funcion"));
+                    output.writeUTF(new Gson().toJson(views.getTxtComboBox()));
+                    int[] id = new Gson().fromJson(input.readUTF(), int[].class);
+                    String[] format = new Gson().fromJson(input.readUTF(), String[].class);
+                    String[] filmName = new Gson().fromJson(input.readUTF(), String[].class);
+                    String[] hour = new Gson().fromJson(input.readUTF(), String[].class);
+                    int[] room = new Gson().fromJson(input.readUTF(), int[].class);
+                    int[] cost = new Gson().fromJson(input.readUTF(), int[].class);
+                    views.setFunctions(id, format, filmName, hour, cost, room);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
                 break;
         }
     }
@@ -56,7 +93,7 @@ public class ControllerUser implements ActionListener {
         } catch (Exception e) {
             e.printStackTrace();
         }
-       
+
     }
 
 }

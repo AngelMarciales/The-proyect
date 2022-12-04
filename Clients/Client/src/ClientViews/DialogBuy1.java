@@ -34,8 +34,12 @@ public class DialogBuy1 extends JDialog {
         add(botPanelDialogBuy1, BorderLayout.SOUTH);
     }
 
-    public void addItems(String item) {
+    public void addItems(String[] item) {
         topPanelBuy1.addItems(item);
+    }
+
+    public String getTxtComboBox() {
+        return topPanelBuy1.getTxtComboBox();
     }
 
     public void setColor(String position, boolean confirm) {
@@ -46,15 +50,8 @@ public class DialogBuy1 extends JDialog {
         return botPanelDialogBuy1.getTxtField();
     }
 
-    public void setTxtFunction1(int id, String format, String filmName, String hour, int cost, boolean confirm) {
-        centerPanelDialogBuy1.setTxtFunction1(id, format, filmName, hour, cost, confirm);
+    public void setFunctions(int[] id, String[] format, String[] filmName, String[] hour, int[] cost, int[] room) {
+        centerPanelDialogBuy1.setFunctions(id, format, filmName, hour, cost, room);
     }
 
-    public void setTxtFunction2(int id, String format, String filmName, String hour, int cost, boolean confirm) {
-        centerPanelDialogBuy1.setTxtFunction2(id, format, filmName, hour, cost, confirm);
-    }
-
-    public void setTxtFunction3(int id, String format, String filmName, String hour, int cost, boolean confirm) {
-        centerPanelDialogBuy1.setTxtFunction3(id, format, filmName, hour, cost, confirm);
-    }
 }

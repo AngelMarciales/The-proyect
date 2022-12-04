@@ -36,8 +36,12 @@ public class Views extends JFrame {
         this.getContentPane().add(centerPanel1, BorderLayout.CENTER);
     }
 
-    public void addItems(String item) {
+    public void addItems(String[] item) {
         dialogBuy.addItems(item);
+    }
+
+    public String getTxtComboBox() {
+        return dialogBuy.getTxtComboBox();
     }
 
     public void setColor(String position, boolean confirm) {
@@ -48,16 +52,8 @@ public class Views extends JFrame {
         return dialogBuy.getTxtField();
     }
 
-    public void setTxtFunction1(int id, String format, String filmName, String hour, int cost, boolean confirm) {
-        dialogBuy.setTxtFunction1(id, format, filmName, hour, cost, confirm);
-    }
-
-    public void setTxtFunction2(int id, String format, String filmName, String hour, int cost, boolean confirm) {
-        dialogBuy.setTxtFunction2(id, format, filmName, hour, cost, confirm);
-    }
-
-    public void setTxtFunction3(int id, String format, String filmName, String hour, int cost, boolean confirm) {
-        dialogBuy.setTxtFunction3(id, format, filmName, hour, cost, confirm);
+    public void setFunctions(int[] id, String[] format, String[] filmName, String[] hour, int[] cost, int[] room) {
+        dialogBuy.setFunctions(id, format, filmName, hour, cost, room);
     }
 
     public void addItems2(String list) {
@@ -80,23 +76,7 @@ public class Views extends JFrame {
         dialogBillBoard.setTxtFunction2(message);
     }
 
-    public void setFilm1(String name, String popularity) {
-        dialogRanking.setFilm1(name, popularity);
-    }
-
-    public void setFilm2(String name, String popularity) {
-        dialogRanking.setFilm2(name, popularity);
-    }
-
-    public void setFilm3(String name, String popularity) {
-        dialogRanking.setFilm3(name, popularity);
-    }
-
-    public void setFilm4(String name, String popularity) {
-        dialogRanking.setFilm4(name, popularity);
-    }
-
-    public void setFilm5(String name, String popularity) {
-        dialogRanking.setFilm5(name, popularity);
+    public void setRanking(String[] filmList, int[] popularity) {
+        dialogRanking.setRanking(filmList, popularity);
     }
 }

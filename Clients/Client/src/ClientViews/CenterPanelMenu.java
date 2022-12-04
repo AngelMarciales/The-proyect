@@ -11,7 +11,6 @@ public class CenterPanelMenu extends JPanel {
     private JButton button2;
     private JButton button3;
     private JButton button4;
-    private JButton button5;
 
     public CenterPanelMenu(ActionListener listener) {
         initComponents(listener);
@@ -51,10 +50,10 @@ public class CenterPanelMenu extends JPanel {
         button3.setAlignmentX(JButton.CENTER_ALIGNMENT);
         button4.setAlignmentX(JButton.CENTER_ALIGNMENT);
 
-        button1.setActionCommand("Button 1");
-        button2.setActionCommand("Button 2");
-        button3.setActionCommand("Button 3");
-        button4.setActionCommand("Button 4");
+        button1.setActionCommand("Comprar Boleta");
+        button2.setActionCommand("Ver Cartelera");
+        button3.setActionCommand("Ver Rankings");
+        button4.setActionCommand("Salir");
 
         button1.setBounds(40, 10, 200, 20);
         button2.setBounds(40, 30, 200, 20);
