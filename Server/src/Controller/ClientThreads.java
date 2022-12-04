@@ -95,7 +95,7 @@ public class ClientThreads extends Thread {
                         output.writeUTF(new Gson().toJson(cost));
                         break;
                     case "Añadir funcion":
-                        cinema.addFunction(new Function(MAX_PRIORITY, position, null, position, null, null));
+                        cinema.addFunction(new Function(MAX_PRIORITY, position, null, position, 0, null));
                         break;
                     case "Añadir pelicula":
                         cinema.addFilm(new Film(res, res, res));

@@ -9,12 +9,12 @@ public class Function implements Comparable<Function>{
     private int cost;
     private Room room;
 
-    public Function(int id, String format, Film film, String hour, int[] cost2, Room room) {
+    public Function(int id, String format, Film film, String hour, int cost, Room room) {
         this.id = id;
         this.format = format;
         this.film = film;
         this.hour = hour;
-        this.cost = cost2;
+        this.cost = cost;
         this.room = room;
     }
 
