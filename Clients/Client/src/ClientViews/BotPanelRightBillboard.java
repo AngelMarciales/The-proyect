@@ -24,7 +24,7 @@ public class BotPanelRightBillboard extends JPanel {
 
         add(buttonAcept);
 
-        buttonAcept.setActionCommand("Confirmar 2");
+        buttonAcept.setActionCommand("Aceptar 3");
         buttonAcept.addActionListener(listener);
     }
 }

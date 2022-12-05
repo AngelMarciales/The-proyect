@@ -86,11 +86,11 @@ public class Cinema {
 
     public Film searchFilm(String name) {
         Film selectedFilm = null;
-        if (filmList.exist(new Film(name, null))) {
+        if (filmList.exist(new Film(name, null, ""))) {
             ArrayList<Film> fList = filmList.inOrder();
             for (int i = 0; i < fList.size(); i++) {
                 Film aux = fList.get(i);
-                if (aux.equals(new Film(name, null))) {
+                if (aux.equals(new Film(name, null, ""))) {
                     selectedFilm = aux;
                 }
             }

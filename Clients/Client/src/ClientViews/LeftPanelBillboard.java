@@ -24,7 +24,7 @@ public class LeftPanelBillboard extends JPanel {
         add(centerPanelLeftBillboard, BorderLayout.CENTER);
     }
 
-    public void addItems(String list) {
+    public void addItems(String[] list) {
         topPanelLeftBillboard.addItems(list);
     }
 

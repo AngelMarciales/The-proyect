@@ -47,15 +47,20 @@ public class ControllerUser implements ActionListener {
                     views.addItems(filmList);
                     break;
                 case "Ver Cartelera":
-                    output.writeUTF(new Gson().toJson("Ver Cartelera"));
                     views.dialogBillBoard.setVisible(true);
+                    output.writeUTF(new Gson().toJson("Ver Cartelera"));
+                    String[] filmList2 = new Gson().fromJson(input.readUTF(), String[].class);
+                    String[] routes = new Gson().fromJson(input.readUTF(), String[].class);
+                    String[] names = new Gson().fromJson(input.readUTF(), String[].class);
+                    views.addItems2(filmList2);
+                    views.addTarjet(routes, names);
                     break;
                 case "Ver Rankings":
                     views.dialogRanking.setVisible(true);
                     output.writeUTF(new Gson().toJson("Ver Rankings"));
-                    String[] filmList2 = new Gson().fromJson(input.readUTF(), String[].class);
+                    String[] filmList3 = new Gson().fromJson(input.readUTF(), String[].class);
                     int[] popularity = new Gson().fromJson(input.readUTF(), int[].class);
-                    views.setRanking(filmList2, popularity);
+                    views.setRanking(filmList3, popularity);
                     break;
                 case "Salir":
                     output.writeUTF(new Gson().toJson("Salir"));
@@ -71,6 +76,15 @@ public class ControllerUser implements ActionListener {
                     int[] room = new Gson().fromJson(input.readUTF(), int[].class);
                     int[] cost = new Gson().fromJson(input.readUTF(), int[].class);
                     views.setFunctions(id, format, filmName, hour, cost, room);
+                    break;
+                case "Buscar Funcion 2":
+                    output.writeUTF(new Gson().toJson("Buscar Funcion 2"));
+                    output.writeUTF(new Gson().toJson(views.getTxtComboBox2()));
+                    String tarjet = new Gson().fromJson(input.readUTF(), String.class);
+                    String director = new Gson().fromJson(input.readUTF(), String.class);
+                    views.show(tarjet);
+                    views.setTxtFunction1(tarjet);
+                    views.setTxtFunction2(director);
                     break;
                 case "Seleccionar silla":
                     output.writeUTF(new Gson().toJson("Seleccionar silla"));
@@ -114,7 +128,13 @@ public class ControllerUser implements ActionListener {
                     views.dialogBuy.dialog3.setVisible(false);
                     views.dialogBuy.dialog2.setVisible(false);
                     views.dialogBuy.setVisible(false);
-                break;
+                    break;
+                case "Aceptar 3":
+                    views.dialogBillBoard.setVisible(false);
+                    break;
+                case "Aceptar 4":
+                    views.dialogRanking.setVisible(false);
+                    break;
             }
         } catch (Exception e1) {
             e1.printStackTrace();

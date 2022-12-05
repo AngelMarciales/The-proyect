@@ -56,12 +56,16 @@ public class Views extends JFrame {
         dialogBuy.setFunctions(id, format, filmName, hour, cost, room);
     }
 
-    public void addItems2(String list) {
+    public void addItems2(String[] list) {
         dialogBillBoard.addItems(list);
     }
 
     public void show(String a) {
         dialogBillBoard.show(a);
+    }
+
+    public void addTarjet(String[] routes, String[] names){
+        dialogBillBoard.addTarjet(routes, names);
     }
 
     public void setValue(int value){

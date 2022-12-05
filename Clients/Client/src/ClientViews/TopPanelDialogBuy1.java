@@ -49,8 +49,10 @@ public class TopPanelDialogBuy1 extends JPanel {
     }
 
     public void addItems(String[] items) {
-        for (int i = 0; i < items.length; i++) {
-            filmList.addItem(items[i]);
+        if(filmList.getItemCount() == 0){
+            for (int i = 0; i < items.length; i++) {
+                filmList.addItem(items[i]);
+            }
         }
     }
 

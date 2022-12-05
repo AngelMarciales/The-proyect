@@ -31,8 +31,12 @@ public class TopPanelLeftBillboard extends JPanel{
         add(filmList);
     }
 
-    public void addItems(String list){
-        filmList.addItem(list);
+    public void addItems(String[] list){
+        if(filmList.getItemCount() == 0){
+            for (int i = 0; i < list.length; i++) {
+                filmList.addItem(list[i]);
+            }
+        }
     }
 
     public String getTxtComboBox(){

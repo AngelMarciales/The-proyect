@@ -22,7 +22,7 @@ public class CenterPanelLeftBillboard extends JPanel {
         buttonSearch.setFocusable(false);
         buttonSearch.setBorderPainted(false);
 
-        buttonSearch.setActionCommand("Buscar 2");
+        buttonSearch.setActionCommand("Buscar Funcion 2");
 
         add(buttonSearch);
 

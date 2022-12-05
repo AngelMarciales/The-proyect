@@ -6,12 +6,8 @@ import java.awt.CardLayout;
 
 public class CenterPanelBillBoard extends JPanel {
 
-    private TarjetaVacia tarjetaVacia;
-    private TarjetaThor tarjetaThor;
-    private TarjetaMinions tarjetaMinions;
-    private TarjetaLightYear tarjetaLightYear;
-    private TarjetaTelefonoNegro tarjetaTelefonoNegro;
-    private TarjetaTopGun tarjetaTopGun;
+    private Tarjeta[] tarjetaVacia;
+
     private CardLayout cl;
 
     public CenterPanelBillBoard() {
@@ -22,19 +18,19 @@ public class CenterPanelBillBoard extends JPanel {
         this.setBackground(Color.WHITE);
         this.setLayout(new CardLayout());
         cl = (CardLayout) this.getLayout();
-        tarjetaVacia = new TarjetaVacia();
-        tarjetaThor = new TarjetaThor();
-        tarjetaMinions = new TarjetaMinions();
-        tarjetaLightYear = new TarjetaLightYear();
-        tarjetaTelefonoNegro = new TarjetaTelefonoNegro();
-        tarjetaTopGun = new TarjetaTopGun();
+        tarjetaVacia = new Tarjeta[15];
+        for (int i = 0; i < tarjetaVacia.length; i++) {
+            tarjetaVacia[i] = new Tarjeta();
+        }
+    }
 
-        add(tarjetaVacia);
-        add(tarjetaThor, "Thor: Amor y Trueno");
-        add(tarjetaMinions, "Minions 2: Nace un Villano");
-        add(tarjetaLightYear, "Ligthyear");
-        add(tarjetaTelefonoNegro, "El Telefono Negro");
-        add(tarjetaTopGun, "Top Gun Maverik");
+    public void addTarjet(String[] routes, String[] names){
+        for (int i = 1; i <= tarjetaVacia.length; i++) {
+            if(i < routes.length){
+                tarjetaVacia[i].setIcon(routes[i]);
+                cl.addLayoutComponent(tarjetaVacia[i], names[i]);
+            }
+        }
     }
 
     public void show(String a) {

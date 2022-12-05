@@ -5,19 +5,26 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-public class TarjetaVacia extends JPanel {
+public class Tarjeta extends JPanel {
 
     private JLabel label;
 
-    public TarjetaVacia() {
+    public Tarjeta() {
         initComponents();
     }
 
     public void initComponents() {
         this.setBackground(Color.WHITE);
         label = new JLabel();
-        ImageIcon image = new ImageIcon();
-        label.setIcon(image);
         add(label);
+    }
+
+    public void setIcon(String route){
+        ImageIcon image = new ImageIcon(route);
+        label.setIcon(image);
+    }
+
+    public void setName(String name){
+        label.setName(name);
     }
 }

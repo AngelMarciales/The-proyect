@@ -5,10 +5,12 @@ public class Film implements Comparable<Film>{
     private String name;
     private String director;
     private int popularity;
+    private String routeImage;
 
-    public Film (String name, String director){
+    public Film (String name, String director, String routeImage){
         this.name = name;
         this.director = director;
+        this.routeImage = routeImage;
     }
 
     public String getName() {
@@ -21,6 +23,10 @@ public class Film implements Comparable<Film>{
 
     public int getPopularity() {
         return popularity;
+    }
+
+    public String getRouteImage() {
+        return routeImage;
     }
 
     public void setPopularityMax(int num) {

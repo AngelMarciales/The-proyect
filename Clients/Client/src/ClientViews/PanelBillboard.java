@@ -24,12 +24,16 @@ public class PanelBillboard extends JPanel {
         add(rightPanelBillboard, BorderLayout.EAST);
     }
 
-    public void addItems(String list) {
+    public void addItems(String[] list) {
         leftPanelBillboard.addItems(list);
     }
 
     public void show1(String a) {
         centerPanelBillBoard.show(a);
+    }
+
+    public void addTarjet(String[] routes, String[] names){
+        centerPanelBillBoard.addTarjet(routes, names);
     }
 
     public String getTxtComboBox() {

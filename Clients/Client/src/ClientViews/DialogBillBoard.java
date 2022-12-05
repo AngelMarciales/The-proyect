@@ -20,12 +20,16 @@ public class DialogBillBoard extends JDialog {
         this.getContentPane().add(panelBillboard);
     }
 
-    public void addItems(String list) {
+    public void addItems(String[] list) {
         panelBillboard.addItems(list);
     }
 
     public void show(String a) {
         panelBillboard.show1(a);
+    }
+
+    public void addTarjet(String[] routes, String[] names){
+        panelBillboard.addTarjet(routes, names);
     }
 
     public String getTxtComboBox() {

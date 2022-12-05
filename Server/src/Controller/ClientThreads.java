@@ -22,7 +22,6 @@ public class ClientThreads extends Thread {
     private Persistence persistence;
     private int idFilm;
     private int totalCost;
-    private String position;
 
     public ClientThreads(Socket serverSocket, Cinema cinema) {
         try {
@@ -46,6 +45,15 @@ public class ClientThreads extends Thread {
                     output.writeUTF(new Gson().toJson(cinema.calculatePopularity()));
                     break;
                 case "Ver Cartelera":
+                    output.writeUTF(new Gson().toJson(cinema.calculatePopularity()));
+                    String[] routes = new String[cinema.getBillboard().length];
+                    String[] names = new String[cinema.getBillboard().length];
+                    for (int i = 0; i < cinema.getBillboard().length; i++) {
+                        routes[i] = cinema.getBillboard()[i].getRouteImage();
+                        names[i] = cinema.getBillboard()[i].getName();
+                    }
+                    output.writeUTF(new Gson().toJson(routes));
+                    output.writeUTF(new Gson().toJson(names));
                     break;
                 case "Ver Rankings":
                     String[] filmsnames = cinema.calculatePopularity();
@@ -84,13 +92,26 @@ public class ClientThreads extends Thread {
                         room[i] = functionList.get(i).getRoom().getId();
                         cost[i] = functionList.get(i).getCost();
                     }
-
                     output.writeUTF(new Gson().toJson(id));
                     output.writeUTF(new Gson().toJson(format));
                     output.writeUTF(new Gson().toJson(filmName));
                     output.writeUTF(new Gson().toJson(hour));
                     output.writeUTF(new Gson().toJson(room));
                     output.writeUTF(new Gson().toJson(cost));
+                    break;
+                case "Buscar Funcion 2":
+                    String name2 = new Gson().fromJson(input.readUTF(), String.class);
+                    String tarjet = "";
+                    String director = "";
+                    for (int i = 0; i < cinema.getFunctionList().length; i++) {
+                        if (cinema.getFunctionList()[i].getFilm().getName().equalsIgnoreCase(name2)) {
+                            tarjet = cinema.getFunctionList()[i].getFilm().getName();
+                            director = cinema.getFunctionList()[i].getFilm().getDirector();
+                            break;
+                        }
+                    }
+                    output.writeUTF(new Gson().toJson(tarjet));
+                    output.writeUTF(new Gson().toJson(director));
                     break;
                 case "Seleccionar silla":
                     Room rooms = null;
@@ -130,7 +151,7 @@ public class ClientThreads extends Thread {
                     break;
                 case "Añadir pelicula":
                     String[] film = new Gson().fromJson(input.readUTF(), String[].class);
-                    cinema.addFilm(new Film(film[0], film[1]));
+                    // cinema.addFilm(new Film(film[0], film[1]));
                     break;
                 case "Borrar funcion":
                     cinema.deleteFunction(input.readInt());

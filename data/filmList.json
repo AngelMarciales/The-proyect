@@ -1,1 +1,32 @@
-[{"name":"El Telefono Negro","director":"Scott Derrickson","popularity":0},{"name":"Ligthyear","director":"Angus MacLane","popularity":0},{"name":"Top Gun Maverik","director":"Joseph Kosinski","popularity":0},{"name":"Thor: Amor y Trueno","director":"Taika Waititi","popularity":2},{"name":"Minions 2: Nace un Villano","director":"Kyle Balda","popularity":0}]
+[
+    {
+        "name": "Minions 2: Nace un Villano",
+        "director": "Kyle Balda",
+        "popularity": 0,
+        "routeImage": "data/imageMinions.jpg"
+    },
+    {
+        "name": "Thor: Amor y Trueno",
+        "director": "Taika Waititi",
+        "popularity": 0,
+        "routeImage": "data/imageThor.jpg"
+    },
+    {
+        "name": "Top Gun Maverik",
+        "director": "Joseph Kosinski",
+        "popularity": 0,
+        "routeImage": "data/imageTopGun.jpg"
+    },
+    {
+        "name": "Ligthyear",
+        "director": "Angus MacLane",
+        "popularity": 0,
+        "routeImage": "data/imageLightyear.jpg"
+    },
+    {
+        "name": "El Telefono Negro",
+        "director": "Scott Derrickson",
+        "popularity": 0,
+        "routeImage": "data/imageTelefonoNegro.jpg"
+    }
+]
