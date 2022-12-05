@@ -34,4 +34,8 @@ public class AddFilmDialog extends JDialog {
     public String getDirector(){
         return addFilmPanel.getDirector();
     }
+
+    public String getURLImage(){
+        return addFilmPanel.getURLImage();
+    }
 }

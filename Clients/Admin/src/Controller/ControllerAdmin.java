@@ -64,9 +64,10 @@ public class ControllerAdmin implements ActionListener {
                     views.filmPanel.setVisible(true);
                     break;
                 case "Aceptar2":
-                    String[] newFilm = new String[6];
+                    String[] newFilm = new String[3];
                     newFilm[0] = views.getName();
                     newFilm[1] = views.getDirector();
+                    newFilm[2] = views.getURLImage();
                     output.writeUTF(new Gson().toJson(newFilm, String[].class));
                     views.setVisible(true);
                     views.functionPanel.setVisible(false);

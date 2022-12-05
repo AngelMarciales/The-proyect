@@ -151,7 +151,7 @@ public class ClientThreads extends Thread {
                     break;
                 case "Añadir pelicula":
                     String[] film = new Gson().fromJson(input.readUTF(), String[].class);
-                    // cinema.addFilm(new Film(film[0], film[1]));
+                    cinema.addFilm(new Film(film[0], film[1], film[2]));
                     break;
                 case "Borrar funcion":
                     cinema.deleteFunction(input.readInt());

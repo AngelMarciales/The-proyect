@@ -80,6 +80,10 @@ public class Views extends JFrame {
         return filmPanel.getDirector();
     }
 
+    public String getURLImage(){
+        return filmPanel.getURLImage();
+    }
+
     public int getDeleteID() {
         return deleteFunctionPanel.getDeleteID();
     }

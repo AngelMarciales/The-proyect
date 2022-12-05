@@ -8,8 +8,10 @@ public class AddFilmPanel extends JPanel{
 
     private JLabel nameLabel;
     private JLabel directoryLabel;
+    private JLabel imgLabel;
     private JTextField nameTxt;
     private JTextField directoryTxt;
+    private JTextField imgTxt;
 
     public AddFilmPanel(ActionListener listener){
         initComponents(listener);
@@ -25,6 +27,12 @@ public class AddFilmPanel extends JPanel{
         add(directoryLabel);
         directoryTxt = new JTextField(10);
         add(directoryTxt);
+
+        imgLabel = new JLabel("Link de la imagen");
+        add(imgLabel);
+
+        imgTxt = new JTextField(100);
+        add(imgTxt);
     }
 
     public String getName(){
@@ -33,6 +41,10 @@ public class AddFilmPanel extends JPanel{
 
     public String getDirector(){
         return directoryTxt.getText();
+    }
+
+    public String getURLImage(){
+        return imgTxt.getText();
     }
     
 }
