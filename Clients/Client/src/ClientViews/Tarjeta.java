@@ -2,6 +2,9 @@ package ClientViews;
 
 import javax.swing.JPanel;
 import java.awt.Color;
+import java.net.URL;
+import java.awt.Image;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
@@ -19,12 +22,20 @@ public class Tarjeta extends JPanel {
         add(label);
     }
 
-    public void setIcon(String route){
-        ImageIcon image = new ImageIcon(route);
-        label.setIcon(image);
+    public void setIcon(String route) {
+        try {
+            URL url = new URL(route);
+            Image image = null;
+            image = ImageIO.read(url);
+            Image image2 = image.getScaledInstance(250, 400, Image.SCALE_DEFAULT);
+            label.setIcon(new ImageIcon(image2));
+        } catch (Exception e) {
+            
+        }
+
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         label.setName(name);
     }
 }
