@@ -81,7 +81,13 @@ public class Cinema {
     }
 
     public void editFunction(Function function) {
-
+        if (functionList.exist(function)) {
+            functionList.search(function).setCost(function.getCost());
+            functionList.search(function).setFilm(function.getFilm());
+            functionList.search(function).setFormat(function.getFormat());
+            functionList.search(function).setHour(function.getHour());
+            functionList.search(function).setRoom(function.getRoom());
+        }
     }
 
     public Film searchFilm(String name) {
