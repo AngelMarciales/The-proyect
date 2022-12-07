@@ -8,7 +8,7 @@ import Models.Cinema;
 
 public class Server {
 
-    private static final int PORT = 1234;
+    private static final int PORT = 13240;
     private ServerSocket serverSocket;
     private Socket socket;
     private Cinema cinema;

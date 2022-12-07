@@ -14,7 +14,7 @@ import ClientViews.Views;
 
 public class ControllerUser implements ActionListener {
 
-    private static final int PORT = 1234;
+    private static final int PORT = 13240;
     private static final String HOST = "localhost";
     private DataInputStream input;
     private DataOutputStream output;

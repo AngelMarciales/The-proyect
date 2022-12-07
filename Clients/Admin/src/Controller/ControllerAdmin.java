@@ -14,7 +14,7 @@ import java.awt.event.ActionListener;
 
 public class ControllerAdmin implements ActionListener {
 
-    private static final int PORT = 1234;
+    private static final int PORT = 13240;
     private static final String HOST = "localhost";
     private DataInputStream input;
     private DataOutputStream output;
@@ -43,10 +43,11 @@ public class ControllerAdmin implements ActionListener {
                     output.writeUTF(new Gson().toJson("Añadir funcion"));
                     String[] lista = new Gson().fromJson(input.readUTF(), String[].class);
                     views.addFilmItems(lista);
-                    String[] rooms = new String[] { "1", "2", "3" };
+                    String[] rooms = new String[] { "1", "2", "3", "4", "5"};
                     views.addRoomItems(rooms);
                     break;
                 case "Aceptar1":
+                    output.writeUTF(new Gson().toJson("Aceptar2"));
                     String[] newFunction = new String[6];
                     newFunction[0] = views.getID();
                     newFunction[1] = views.getFormat();
@@ -59,11 +60,11 @@ public class ControllerAdmin implements ActionListener {
                     views.functionPanel.setVisible(false);
                     break;
                 case "Añadir pelicula":
-                    output.writeUTF("Añadir pelicula");
                     views.setVisible(false);
                     views.filmPanel.setVisible(true);
                     break;
                 case "Aceptar2":
+                    output.writeUTF("Aceptar3");
                     String[] newFilm = new String[3];
                     newFilm[0] = views.getName();
                     newFilm[1] = views.getDirector();
