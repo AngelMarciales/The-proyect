@@ -14,8 +14,6 @@ public class AddFunctionPanel extends JPanel {
     private JLabel hourLabel;
     private JLabel costLabel;
     private JLabel roomLabel;
-    private JLabel blank;
-
     private JTextField idTxt;
     private JTextField hourTxt;
     private JTextField costTxt;

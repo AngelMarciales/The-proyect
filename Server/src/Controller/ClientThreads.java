@@ -141,8 +141,9 @@ public class ClientThreads extends Thread {
                     Save();
                     break;
                 case "Añadir funcion":
-                    String[] function = cinema.getFilmsName();
-                    output.writeUTF(new Gson().toJson(function));
+                case "Editar funcion":
+                    String[] function2 = cinema.getFilmsName();
+                    output.writeUTF(new Gson().toJson(function2));
                     break;
                 case "Aceptar2":
                     String[] newFunction = new Gson().fromJson(input.readUTF(), String[].class);
@@ -166,7 +167,7 @@ public class ClientThreads extends Thread {
                     Film aux3 = cinema.searchFilm(editedFunction[2]);
                     Room aux4 = new Room(Integer.parseInt(editedFunction[5]));
                     cinema.editFunction(new Function(Integer.parseInt(editedFunction[0]), editedFunction[1], aux3,
-                    editedFunction[3], Integer.parseInt(editedFunction[4]), aux4));
+                            editedFunction[3], Integer.parseInt(editedFunction[4]), aux4));
                     Save();
                     break;
                 case "Salir":

@@ -12,7 +12,7 @@ public class EditFunctionDialog extends JDialog {
     private AcceptAndCancelEditFunctionPanel buttons;
 
     public EditFunctionDialog(ActionListener listener) {
-        this.setSize(300, 300);
+        this.setSize(600, 600);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         initComponents(listener);
@@ -28,6 +28,14 @@ public class EditFunctionDialog extends JDialog {
 
         buttons = new AcceptAndCancelEditFunctionPanel(listener);
         add(buttons, BorderLayout.SOUTH);
+    }
+
+    public void addFilmItems(String[] films) {
+        editFunctionPanel.addFilmItems(films);
+    }
+
+    public void addRoomItems(String[] rooms) {
+        editFunctionPanel.addRoomItems(rooms);
     }
 
     public String getEditedID(){

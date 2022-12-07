@@ -40,6 +40,14 @@ public class Views extends JFrame {
         this.getContentPane().add(mainBottonsPanel, BorderLayout.CENTER);
     }
 
+    public void addEditedFilmItems(String[] films) {
+        editFunctionPanel.addFilmItems(films);
+    }
+
+    public void addEditedRoomItems(String[] rooms) {
+        editFunctionPanel.addRoomItems(rooms);
+    }
+
     public void addFilmItems(String[] films){
         functionPanel.addFilmItems(films);
     }

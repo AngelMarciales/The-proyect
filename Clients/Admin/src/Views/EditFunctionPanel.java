@@ -1,7 +1,7 @@
 package Views;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
@@ -23,14 +23,12 @@ public class EditFunctionPanel extends JPanel {
     private JComboBox<String> roomCBox;
 
     public EditFunctionPanel(ActionListener listener) {
-        this.setSize(300, 300);
         initComponents(listener);
-        this.setVisible(false);
     }
 
     public void initComponents(ActionListener listener) {
-        this.setBackground(Color.WHITE);
-        setLayout(new BorderLayout());
+        this.setLayout(new GridLayout(10, 2, 15, 15));
+        this.setBackground(new Color(69, 65, 65));
 
         idLabel = new JLabel("ID");
         add(idLabel);
@@ -63,6 +61,20 @@ public class EditFunctionPanel extends JPanel {
         add(roomLabel);
         roomCBox = new JComboBox<String>();
         add(roomCBox);
+    }
+
+    public void addFilmItems(String[] films) {
+        filmCBox.removeAllItems();
+        for (int i = 0; i < films.length; i++) {
+            filmCBox.addItem(films[i]);
+        }
+    }
+
+    public void addRoomItems(String[] rooms) {
+        roomCBox.removeAllItems();
+        for (int i = 0; i < rooms.length; i++) {
+            roomCBox.addItem(rooms[i]);
+        }
     }
 
     public String getEditedID(){
