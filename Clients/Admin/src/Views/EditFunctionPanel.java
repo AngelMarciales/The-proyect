@@ -64,4 +64,28 @@ public class EditFunctionPanel extends JPanel {
         roomCBox = new JComboBox<String>();
         add(roomCBox);
     }
+
+    public String getEditedID(){
+        return idTxt.getText();
+    }
+
+    public String getEditedFormat(){
+        return String.valueOf(formatCBox.getSelectedItem());
+    }
+
+    public String getEditedFilm(){
+        return String.valueOf(filmCBox.getSelectedItem());
+    }
+
+    public String geteditedHour(){
+        return hourTxt.getText();
+    }
+
+    public String getEditedCost(){
+        return costTxt.getText();
+    }
+
+    public String geteditedRoom(){
+        return String.valueOf(roomCBox.getSelectedItem());
+    }
 }

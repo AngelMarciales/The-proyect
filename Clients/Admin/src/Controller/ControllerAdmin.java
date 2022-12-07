@@ -84,14 +84,21 @@ public class ControllerAdmin implements ActionListener {
                     views.deleteFunctionPanel.setVisible(false);
                     break;
                 case "Editar funcion":
-                    output.writeUTF("Editar funcion");
                     views.setVisible(false);
                     views.editFunctionPanel.setVisible(true);
                     break;
                 case "Aceptar4":
-                    output.writeInt(views.getDeleteID());
+                    output.writeUTF("Aceptar5");
+                    String[] editedFunction = new String[6];
+                    editedFunction[0] = views.getEditedID();
+                    editedFunction[1] = views.getEditedFormat();
+                    editedFunction[2] = views.getEditedFilm();
+                    editedFunction[3] = views.geteditedHour();
+                    editedFunction[4] = views.getEditedCost();
+                    editedFunction[5] = views.getEditedRoom();
+                    output.writeUTF(new Gson().toJson(editedFunction, String[].class));
+                    views.editFunctionPanel.setVisible(false);
                     views.setVisible(true);
-                    views.deleteFunctionPanel.setVisible(false);
                     break;
                 case "Salir":
                     output.writeUTF("Salir");

@@ -87,4 +87,28 @@ public class Views extends JFrame {
     public int getDeleteID() {
         return deleteFunctionPanel.getDeleteID();
     }
+
+    public String getEditedID(){
+        return editFunctionPanel.getEditedID();
+    }
+
+    public String getEditedFormat(){
+        return editFunctionPanel.getEditedFormat();
+    }
+
+    public String getEditedFilm(){
+        return editFunctionPanel.getEditedFilm();
+    }
+
+    public String geteditedHour(){
+        return editFunctionPanel.geteditedHour();
+    }
+
+    public String getEditedCost(){
+        return editFunctionPanel.getEditedCost();
+    }
+
+    public String getEditedRoom(){
+        return editFunctionPanel.getEditedRoom();
+    }
 }

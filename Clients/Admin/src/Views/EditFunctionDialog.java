@@ -29,4 +29,28 @@ public class EditFunctionDialog extends JDialog {
         buttons = new AcceptAndCancelEditFunctionPanel(listener);
         add(buttons, BorderLayout.SOUTH);
     }
+
+    public String getEditedID(){
+        return editFunctionPanel.getEditedID();
+    }
+
+    public String getEditedFormat(){
+        return editFunctionPanel.getEditedFormat();
+    }
+
+    public String getEditedFilm(){
+        return editFunctionPanel.getEditedFilm();
+    }
+
+    public String geteditedHour(){
+        return editFunctionPanel.geteditedHour();
+    }
+
+    public String getEditedCost(){
+        return editFunctionPanel.getEditedCost();
+    }
+
+    public String getEditedRoom(){
+        return editFunctionPanel.geteditedRoom();
+    }
 }
