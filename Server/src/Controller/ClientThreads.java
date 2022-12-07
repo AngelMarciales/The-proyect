@@ -144,10 +144,6 @@ public class ClientThreads extends Thread {
                     String[] function = cinema.getFilmsName();
                     output.writeUTF(new Gson().toJson(function));
                     break;
-                case "Borrar funcion":
-                    cinema.deleteFunction(input.readInt());
-                    Save();
-                    break;
                 case "Editar funcion":
                     cinema.editFunction(null);
                     break;
@@ -162,6 +158,10 @@ public class ClientThreads extends Thread {
                 case "Aceptar3":
                     String[] film = new Gson().fromJson(input.readUTF(), String[].class);
                     cinema.addFilm(new Film(film[0], film[1], film[2]));
+                    Save();
+                    break;
+                case "Aceptar4":
+                    cinema.deleteFunction(input.readInt());
                     Save();
                     break;
                 case "Salir":

@@ -43,7 +43,7 @@ public class ControllerAdmin implements ActionListener {
                     output.writeUTF(new Gson().toJson("Añadir funcion"));
                     String[] lista = new Gson().fromJson(input.readUTF(), String[].class);
                     views.addFilmItems(lista);
-                    String[] rooms = new String[] { "1", "2", "3", "4", "5"};
+                    String[] rooms = new String[] { "1", "2", "3", "4", "5" };
                     views.addRoomItems(rooms);
                     break;
                 case "Aceptar1":
@@ -64,7 +64,7 @@ public class ControllerAdmin implements ActionListener {
                     views.filmPanel.setVisible(true);
                     break;
                 case "Aceptar2":
-                    output.writeUTF("Aceptar3");
+                    output.writeUTF(new Gson().toJson("Aceptar3"));
                     String[] newFilm = new String[3];
                     newFilm[0] = views.getName();
                     newFilm[1] = views.getDirector();
@@ -74,11 +74,11 @@ public class ControllerAdmin implements ActionListener {
                     views.functionPanel.setVisible(false);
                     break;
                 case "Borrar funcion":
-                    output.writeUTF("Borrar funcion");
                     views.setVisible(false);
                     views.deleteFunctionPanel.setVisible(true);
                     break;
                 case "Aceptar3":
+                    output.writeUTF(new Gson().toJson("Aceptar4"));
                     output.writeInt(views.getDeleteID());
                     views.setVisible(true);
                     views.deleteFunctionPanel.setVisible(false);

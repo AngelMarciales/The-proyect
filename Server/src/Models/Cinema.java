@@ -72,11 +72,10 @@ public class Cinema {
     }
 
     public void deleteFunction(int id) {
-        ArrayList<Function> functionInOrder = functionList.inOrder();
-        for (int i = 0; i < functionInOrder.size(); i++) {
-            if (functionInOrder.get(i).getId() == id) {
-                functionList.delete(functionInOrder.get(i));
-            }
+        Function aux = new Function(id, null, null, null, 0, null);
+        if(functionList.exist(aux)){
+            functionList.delete(functionList.search(aux));
+            System.out.println("aaaaa");
         }
     }
 
