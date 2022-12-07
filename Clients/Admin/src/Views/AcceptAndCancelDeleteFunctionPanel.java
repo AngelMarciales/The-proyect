@@ -15,7 +15,7 @@ public class AcceptAndCancelDeleteFunctionPanel extends JPanel{
     }
 
     private void initComponents(ActionListener listener) {
-        this.setBackground(Color.GREEN);
+        this.setBackground(new Color(65, 69, 69));
 
         accept = new JButton("Aceptar");
         accept.addActionListener(listener);

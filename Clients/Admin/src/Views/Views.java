@@ -11,7 +11,7 @@ public class Views extends JFrame {
     private MainBottonsPanel mainBottonsPanel;
     public AddfunctionDialog functionPanel;
     public AddFilmDialog filmPanel;
-    public DeleteFunctionPanel deleteFunctionPanel;
+    public DeleteFunctionDialog deleteFunctionPanel;
     public EditFunctionDialog editFunctionPanel;
 
     public Views(ActionListener listener) {
@@ -30,7 +30,7 @@ public class Views extends JFrame {
         mainBottonsPanel = new MainBottonsPanel(listener);
         functionPanel = new AddfunctionDialog(listener);
         filmPanel = new AddFilmDialog(listener);
-        deleteFunctionPanel = new DeleteFunctionPanel(listener);
+        deleteFunctionPanel = new DeleteFunctionDialog(listener);
         editFunctionPanel = new EditFunctionDialog(listener);
         functionPanel.setVisible(false);
         filmPanel.setVisible(false);

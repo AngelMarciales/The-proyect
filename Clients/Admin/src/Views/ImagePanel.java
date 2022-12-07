@@ -16,6 +16,7 @@ public class ImagePanel extends JPanel {
 
     public void initComponents() {
         this.setBackground(Color.WHITE);
+        
         Image img = new ImageIcon("data/icono.png").getImage();
         ImageIcon img2 = new ImageIcon(img.getScaledInstance(70, 70, Image.SCALE_SMOOTH));
         label = new JLabel();

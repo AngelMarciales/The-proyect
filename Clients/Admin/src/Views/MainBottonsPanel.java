@@ -20,6 +20,7 @@ public class MainBottonsPanel extends JPanel {
     public void initComponents(ActionListener listener) {
         this.setBackground(Color.WHITE);
         this.setLayout(null);
+        
         button1 = new JButton("Añadir funcion");
         button2 = new JButton("Añadir pelicula");
         button3 = new JButton("Borrar funcion");
