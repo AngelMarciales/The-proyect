@@ -53,7 +53,7 @@ public class AddfunctionDialog extends JDialog {
         return addFunctionPanel.getHour();
     }
 
-    public int getCost(){
+    public String getCost(){
         return addFunctionPanel.getCost();
     }
 

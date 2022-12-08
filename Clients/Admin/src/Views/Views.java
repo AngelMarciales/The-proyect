@@ -72,7 +72,7 @@ public class Views extends JFrame {
         return functionPanel.getHour();
     }
 
-    public int getCost(){
+    public String getCost(){
         return functionPanel.getCost();
     }
 

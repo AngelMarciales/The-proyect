@@ -98,8 +98,8 @@ public class AddFunctionPanel extends JPanel {
         return hourTxt.getText();
     }
 
-    public int getCost() {
-        return Integer.parseInt(costTxt.getText());
+    public String getCost() {
+        return costTxt.getText();
     }
 
     public String getRoom() {

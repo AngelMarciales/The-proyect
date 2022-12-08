@@ -44,14 +44,7 @@ public class ControllerAdmin implements ActionListener {
                     break;
                 case "Aceptar1":
                     output.writeUTF(new Gson().toJson("Aceptar2"));
-                    String[] newFunction = new String[6];
-                    newFunction[0] = views.getID();
-                    newFunction[1] = views.getFormat();
-                    newFunction[2] = views.getFilm();
-                    newFunction[3] = views.getHour();
-                    newFunction[4] = String.valueOf(views.getCost());
-                    newFunction[5] = views.getRoom();
-                    output.writeUTF(new Gson().toJson(newFunction, String[].class));
+                    output.writeUTF(new Gson().toJson(fillFunctionArray(), String[].class));
                     views.setVisible(true);
                     views.functionPanel.setVisible(false);
                     break;
@@ -61,11 +54,7 @@ public class ControllerAdmin implements ActionListener {
                     break;
                 case "Aceptar2":
                     output.writeUTF(new Gson().toJson("Aceptar3"));
-                    String[] newFilm = new String[3];
-                    newFilm[0] = views.getName();
-                    newFilm[1] = views.getDirector();
-                    newFilm[2] = views.getURLImage();
-                    output.writeUTF(new Gson().toJson(newFilm, String[].class));
+                    output.writeUTF(new Gson().toJson(fillFilmArray(), String[].class));
                     views.setVisible(true);
                     views.functionPanel.setVisible(false);
                     break;
@@ -90,14 +79,14 @@ public class ControllerAdmin implements ActionListener {
                     break;
                 case "Aceptar4":
                     output.writeUTF("Aceptar5");
-                    String[] editedFunction = new String[6];
-                    editedFunction[0] = views.getEditedID();
-                    editedFunction[1] = views.getEditedFormat();
-                    editedFunction[2] = views.getEditedFilm();
-                    editedFunction[3] = views.geteditedHour();
-                    editedFunction[4] = views.getEditedCost();
-                    editedFunction[5] = views.getEditedRoom();
-                    output.writeUTF(new Gson().toJson(editedFunction));
+                    output.writeUTF(new Gson().toJson(fillEditedFunctionArray()));
+                    views.editFunctionPanel.setVisible(false);
+                    views.setVisible(true);
+                    break;
+                case "Cancelar":
+                    views.functionPanel.setVisible(false);
+                    views.deleteFunctionPanel.setVisible(false);
+                    views.filmPanel.setVisible(false);
                     views.editFunctionPanel.setVisible(false);
                     views.setVisible(true);
                     break;
@@ -111,6 +100,36 @@ public class ControllerAdmin implements ActionListener {
             e.printStackTrace();
         }
 
+    }
+
+    private String[] fillFunctionArray() {
+        String[] newFunction = new String[6];
+        newFunction[0] = views.getID();
+        newFunction[1] = views.getFormat();
+        newFunction[2] = views.getFilm();
+        newFunction[3] = views.getHour();
+        newFunction[4] = views.getCost();
+        newFunction[5] = views.getRoom();
+        return newFunction;
+    }
+
+    private String[] fillEditedFunctionArray() {
+        String[] editedFunction = new String[6];
+        editedFunction[0] = views.getEditedID();
+        editedFunction[1] = views.getEditedFormat();
+        editedFunction[2] = views.getEditedFilm();
+        editedFunction[3] = views.geteditedHour();
+        editedFunction[4] = views.getEditedCost();
+        editedFunction[5] = views.getEditedRoom();
+        return editedFunction;
+    }
+
+    private String[] fillFilmArray(){
+        String[] newFilm = new String[3];
+        newFilm[0] = views.getName();
+        newFilm[1] = views.getDirector();
+        newFilm[2] = views.getURLImage();
+        return newFilm;
     }
 
     public static void main(String[] args) {

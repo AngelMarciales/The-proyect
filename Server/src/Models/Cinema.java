@@ -63,17 +63,17 @@ public class Cinema {
         return functions;
     }
 
-    public ArrayList<Function> getArrayFunctions(){
+    public ArrayList<Function> getArrayFunctions() {
         return functionList.inOrder();
     }
 
-    public ArrayList<Film> getArrayListFilms(){
+    public ArrayList<Film> getArrayListFilms() {
         return filmList.inOrder();
     }
 
     public void deleteFunction(int id) {
         Function aux = new Function(id, null, null, null, 0, null);
-        if(functionList.exist(aux)){
+        if (functionList.exist(aux)) {
             functionList.delete(functionList.search(aux));
             System.out.println("aaaaa");
         }
@@ -81,10 +81,16 @@ public class Cinema {
 
     public void editFunction(Function function) {
         if (functionList.exist(function)) {
-            functionList.search(function).setCost(function.getCost());
+            if (!(function.getCost() == 0)) {
+                functionList.search(function).setCost(function.getCost());
+            }
             functionList.search(function).setFilm(function.getFilm());
-            functionList.search(function).setFormat(function.getFormat());
-            functionList.search(function).setHour(function.getHour());
+            if (!(function.getFormat().equals(""))) {
+                functionList.search(function).setFormat(function.getFormat());
+            }
+            if (!(function.getHour().equals(""))) {
+                functionList.search(function).setHour(function.getHour());
+            }
             functionList.search(function).setRoom(function.getRoom());
         }
     }

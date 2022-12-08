@@ -31,7 +31,6 @@ public class ClientThreads extends Thread {
             output = new DataOutputStream(socket.getOutputStream());
             persistence = new Persistence();
             loadData();
-            addItems();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -166,8 +165,11 @@ public class ClientThreads extends Thread {
                     String[] editedFunction = new Gson().fromJson(input.readUTF(), String[].class);
                     Film aux3 = cinema.searchFilm(editedFunction[2]);
                     Room aux4 = new Room(Integer.parseInt(editedFunction[5]));
-                    cinema.editFunction(new Function(Integer.parseInt(editedFunction[0]), editedFunction[1], aux3,
-                            editedFunction[3], Integer.parseInt(editedFunction[4]), aux4));
+                    if (!(editedFunction[4].equals(""))) {
+                        cinema.editFunction(new Function(Integer.parseInt(editedFunction[0]), editedFunction[1], aux3,
+                                editedFunction[3], Integer.parseInt(editedFunction[4]), aux4));
+                    }
+
                     Save();
                     break;
                 case "Salir":
@@ -184,53 +186,6 @@ public class ClientThreads extends Thread {
 
     public void loadData() {
         try {
-            /*
-             * ArrayList<Function> functionList = new ArrayList<>();
-             * Function function1 = new Function(1, "2D", new Film("Thor: Amor y Trueno",
-             * "Taika Waititi"), "3pm", 15000,
-             * new Room(1));
-             * Function function2 = new Function(2, "3D", new Film("Thor: Amor y Trueno",
-             * "Taika Waititi"), "6pm", 18000,
-             * new Room(1));
-             * Function function3 = new Function(3, "2D", new Film("Thor: Amor y Trueno",
-             * "Taika Waititi"), "9pm", 15000,
-             * new Room(1));
-             * Function function4 = new Function(4, "3D", new
-             * Film("Minions 2: Nace un Villano", "Kyle Balda"), "4pm",
-             * 18000,
-             * new Room(2));
-             * Function function5 = new Function(5, "2D", new
-             * Film("Minions 2: Nace un Villano", "Kyle Balda"), "8pm",
-             * 15000,
-             * new Room(2));
-             * Function function6 = new Function(6, "2D", new Film("El Telefono Negro",
-             * "Scott Derrickson"), "4pm", 15000,
-             * new Room(3));
-             * Function function7 = new Function(7, "3D", new Film("El Telefono Negro",
-             * "Scott Derrickson"), "8pm", 18000,
-             * new Room(3));
-             * Function function8 = new Function(8, "3D", new Film("Top Gun Maverik",
-             * "Joseph Kosinski"), "4pm", 18000,
-             * new Room(4));
-             * Function function9 = new Function(9, "2D", new Film("Top Gun Maverik",
-             * "Joseph Kosinski"), "8pm", 15000,
-             * new Room(4));
-             * Function function10 = new Function(10, "3D", new Film("Ligthyear",
-             * "Angus MacLane"), "3pm", 18000,
-             * new Room(5));
-             * functionList.add(function1);
-             * functionList.add(function2);
-             * functionList.add(function3);
-             * functionList.add(function4);
-             * functionList.add(function5);
-             * functionList.add(function6);
-             * functionList.add(function7);
-             * functionList.add(function8);
-             * functionList.add(function9);
-             * functionList.add(function10);
-             * persistence.writeFunction(functionList);
-             */
-
             persistence.readFunction();
             persistence.readFilm();
             cinema.loadArchives(persistence.getFuncTionList(), persistence.getFilmList());
@@ -247,14 +202,6 @@ public class ClientThreads extends Thread {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-    }
-
-    public void addItems() {
-        // ArrayList<Film> films = cinema.getFilmList();
-        // for (int i = 0; i < films.size(); i++) {
-        // views.addItems(films.get(i).getName());
-        // views.addItems2(films.get(i).getName());
-        // }
     }
 
 }
