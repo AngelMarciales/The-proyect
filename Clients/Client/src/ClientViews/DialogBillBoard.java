@@ -8,7 +8,7 @@ public class DialogBillBoard extends JDialog {
     private PanelBillboard panelBillboard;
 
     public DialogBillBoard(ActionListener listener) {
-        this.setSize(600, 450);
+        this.setSize(700, 500);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         initComponents(listener);

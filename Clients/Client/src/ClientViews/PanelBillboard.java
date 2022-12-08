@@ -1,5 +1,6 @@
 package ClientViews;
 
+import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import java.awt.event.ActionListener;
 import java.awt.BorderLayout;
@@ -15,13 +16,13 @@ public class PanelBillboard extends JPanel {
     }
 
     public void initComponents(ActionListener listener) {
-        this.setLayout(new BorderLayout());
+        this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
         leftPanelBillboard = new LeftPanelBillboard(listener);
         rightPanelBillboard = new RightPanelBillboard(listener);
         centerPanelBillBoard = new CenterPanelBillBoard();
-        add(centerPanelBillBoard, BorderLayout.CENTER);
-        add(leftPanelBillboard, BorderLayout.WEST);
-        add(rightPanelBillboard, BorderLayout.EAST);
+        add(leftPanelBillboard);
+        add(centerPanelBillBoard);
+        add(rightPanelBillboard);
     }
 
     public void addItems(String[] list) {
