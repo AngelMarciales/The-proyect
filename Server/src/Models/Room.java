@@ -8,13 +8,7 @@ public class Room {
     public Room(int id) {
         this.id = id;
         chairList = new Chair[6][7];
-        int count = 1;
-        for (int i = 0; i < chairList.length; i++) {
-            for (int j = 0; j < chairList[i].length; j++) {
-                chairList[i][j] = new Chair(count);
-                count++;
-            }
-        }
+        createChairList();
     }
 
     public int getId() {
@@ -31,6 +25,16 @@ public class Room {
 
     public void setChairList(Chair[][] chairList) {
         this.chairList = chairList;
+    }
+
+    private void createChairList() {
+        int count = 1;
+        for (int i = 0; i < chairList.length; i++) {
+            for (int j = 0; j < chairList[i].length; j++) {
+                chairList[i][j] = new Chair(count);
+                count++;
+            }
+        }
     }
 
 }

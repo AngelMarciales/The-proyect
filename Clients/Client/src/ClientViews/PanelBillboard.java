@@ -3,7 +3,6 @@ package ClientViews;
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import java.awt.event.ActionListener;
-import java.awt.BorderLayout;
 
 public class PanelBillboard extends JPanel {
 
