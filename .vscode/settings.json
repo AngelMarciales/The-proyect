@@ -1,0 +1,14 @@
+{
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "librerias\\gson-2.8.2.jar",
+            "libraries\\gson-2.8.2.jar",
+            "Server\\libraries\\gson-2.8.2.jar",
+            "Clients\\libraries\\gson-2.8.2.jar"
+        ],
+        "exclude": [
+            "libraries/gson-2.8.2.jar"
+        ]
+    }
+}
