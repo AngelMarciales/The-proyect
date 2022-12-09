@@ -43,7 +43,7 @@ public class DialogBuy3 extends JDialog {
     }
 
     public void setValue(int value) {
-        label.setText("Valor: " + value);
+        label.setText("    Valor: " + value);
     }
 
 }

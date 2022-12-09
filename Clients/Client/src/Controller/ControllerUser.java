@@ -87,8 +87,14 @@ public class ControllerUser implements ActionListener {
                     views.setTxtFunction2(director);
                     break;
                 case "Seleccionar silla":
+                    String txtField = views.getTxtField();
+                    if (txtField.equals("")) {
+                        views.setMessageError("No puede dejar espacios");
+                        views.dialogError.setVisible(true);
+                        break;
+                    }
                     output.writeUTF(new Gson().toJson("Seleccionar silla"));
-                    output.writeUTF(new Gson().toJson(views.getTxtField()));
+                    output.writeUTF(new Gson().toJson(txtField));
                     rooms = new Gson().fromJson(input.readUTF(), Room.class);
                     for (int i = 0; i < rooms.getChairList().length; i++) {
                         for (int j = 0; j < rooms.getChairList()[i].length; j++) {
@@ -100,6 +106,7 @@ public class ControllerUser implements ActionListener {
                         }
                     }
                     views.dialogBuy.dialog2.setVisible(true);
+
                     break;
 
                 case "Chair":
@@ -134,6 +141,15 @@ public class ControllerUser implements ActionListener {
                     break;
                 case "Aceptar 4":
                     views.dialogRanking.setVisible(false);
+                    break;
+                case "Aceptar Error":
+                    views.setVisible(true);
+                    views.dialogBillBoard.setVisible(false);
+                    views.dialogBuy.setVisible(false);
+                    views.dialogRanking.setVisible(false);
+                    views.dialogError.setVisible(false);
+                    views.dialogBuy.dialog3.setVisible(false);
+                    views.dialogBuy.dialog2.setVisible(false);
                     break;
             }
         } catch (Exception e1) {

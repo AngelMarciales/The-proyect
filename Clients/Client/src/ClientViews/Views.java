@@ -11,6 +11,7 @@ public class Views extends JFrame {
     public DialogBuy1 dialogBuy;
     public DialogBillBoard dialogBillBoard;
     public DialogRanking dialogRanking;
+    public DialogError dialogError;
 
     public Views(ActionListener listener) {
         super("Cinema");
@@ -29,9 +30,11 @@ public class Views extends JFrame {
         dialogBuy = new DialogBuy1(listener);
         dialogBillBoard = new DialogBillBoard(listener);
         dialogRanking = new DialogRanking(listener);
+        dialogError = new DialogError(listener);
         dialogBuy.setVisible(false);
         dialogBillBoard.setVisible(false);
         dialogRanking.setVisible(false);
+        dialogError.setVisible(false);
         this.getContentPane().add(topPanel1, BorderLayout.NORTH);
         this.getContentPane().add(centerPanel1, BorderLayout.CENTER);
     }
@@ -88,4 +91,7 @@ public class Views extends JFrame {
         dialogRanking.setRanking(filmList, popularity);
     }
 
+    public void setMessageError(String error){
+        dialogError.setMessageError(error);
+    }
 }
